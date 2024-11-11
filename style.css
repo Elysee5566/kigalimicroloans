@@ -86,10 +86,12 @@ header {
         flex-direction: column;
         position: absolute;
         top: 60px;
-        background-color: white;
+        background-color: #0065A4; /* Matching the header color */
         width: 100%;
         left: 0;
         padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
     }
 
     /* Show hamburger on mobile */
@@ -109,6 +111,16 @@ header {
 
     .nav-bar a {
         font-size: 16px;
+        color: white;
+        text-align: center; /* Ensure links are centered */
+        padding: 10px;
+        background-color: #0065A4; /* Keep the background color for each item */
+        border-radius: 5px;
+    }
+
+    /* Show dropdown links when the hamburger is clicked */
+    .nav-bar a:hover {
+        background-color: #005182; /* Change background on hover */
     }
 }
 
