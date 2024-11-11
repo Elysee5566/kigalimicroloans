@@ -118,3 +118,26 @@ header {
         color: #007bff;
     }
 }
+/* Basic styles for the carousel */
+.image-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Or any specific width */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Active image styles */
+.carousel-image.active {
+    opacity: 1;
+}
