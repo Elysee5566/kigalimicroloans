@@ -93,6 +93,11 @@ header {
     }
 }
 
+/* Center headings */
+h1, h3 {
+    text-align: center;
+}
+
 /* Basic styles for the carousel */
 .image-carousel {
     position: relative;
