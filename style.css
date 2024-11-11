@@ -13,28 +13,12 @@ body {
 
 /* Header and Navigation Styles */
 header {
-    background-color: #0065A4; /* Primary brand color */
+    background-color: #0065A4;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-}
-
-.header-left, .header-right {
-    display: flex;
-    align-items: center;
-}
-
-.header-left img, .header-right img {
-    width: 120px; /* Adjust size as necessary */
-}
-
-.nav-bar {
-    display: flex;
-    justify-content: space-around;
-    width: 40%;
-    font-size: 16px;
 }
 
 .nav-bar a {
@@ -43,22 +27,10 @@ header {
     padding: 10px 20px;
 }
 
-.nav-bar a:hover {
-    background-color: #004F72;
-    border-radius: 5px;
-}
-
 .hamburger {
     display: none;
     font-size: 30px;
     cursor: pointer;
-}
-
-.page-title {
-    display: none;
-    color: white;
-    font-size: 20px;
-    text-align: center;
 }
 
 /* Mobile styles */
@@ -76,14 +48,6 @@ header {
 
     .nav-bar.show {
         display: flex;
-    }
-
-    .header-left, .header-right {
-        display: none;
-    }
-
-    .page-title {
-        display: block;
     }
 }
 
@@ -124,40 +88,19 @@ section {
     color: #0065A4;
 }
 
-.mission p, .benefits p {
+.values-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.values-list li {
     font-size: 18px;
-    color: #333;
+    margin-bottom: 15px;
     line-height: 1.6;
 }
 
-.mission ul, .benefits ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.mission ul li, .benefits ul li {
-    font-size: 16px;
-    margin: 10px 0;
-}
-
-.mission ul li strong, .benefits ul li strong {
+.values-list li strong {
     color: #0065A4;
-}
-
-/* Values and Why Choose Us Dots Styling */
-.values-list {
-    font-size: 18px;
-    color: #333;
-    font-weight: bold;
-    text-align: center;
-    display: inline-block;
-    margin: 0;
-}
-
-.values-list::after {
-    content: ' ·';
-}
-
-.values-list span:last-child::after {
-    content: '';
+    margin-right: 10px;
 }
