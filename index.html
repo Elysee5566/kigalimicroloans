@@ -40,8 +40,13 @@
     <main>
         <section class="intro">
             <h1>Welcome to Kigali MicroLoans</h1>
-            <p>Your Trusted Neighbourhood Lender</p>
+            <h3>Your Trusted Neighbourhood Lender</h3>
             <p>At Kigali MicroLoans, we understand that life can bring unexpected challenges, and sometimes, you need immediate financial support. We are here to help individuals in Rwanda access fast, hassle-free personal loans to solve urgent problems. Whether you need money for medical emergencies, school fees, or other urgent needs, we're here to provide quick assistance.</p>
+        </section>
+                <!-- Image Carousel Section -->
+        <section class="image-carousel">
+            <img src="images/flyer1.jpg" alt="Flyer 1" class="carousel-image">
+            <img src="images/flyer2.jpg" alt="Flyer 2" class="carousel-image">
         </section>
     </main>
 
@@ -65,5 +70,28 @@
             pageTitle.textContent = 'Contact Us';
         }
     </script>
+    <script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carousel-image');
+    const totalImages = images.length;
+
+    function changeImage() {
+        // Remove 'active' class from current image
+        images[currentIndex].classList.remove('active');
+        
+        // Update index (go to the next image, loop back to the first one)
+        currentIndex = (currentIndex + 1) % totalImages;
+        
+        // Add 'active' class to the next image
+        images[currentIndex].classList.add('active');
+    }
+
+    // Change image every 5 seconds
+    setInterval(changeImage, 5000);
+
+    // Initially show the first image
+    images[currentIndex].classList.add('active');
+</script>
+
 </body>
 </html>
