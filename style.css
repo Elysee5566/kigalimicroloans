@@ -1,23 +1,127 @@
-<section class="mission">
-    <h2>Our Mission</h2>
-    <p>Our mission is to provide fast, reliable, and accessible loans to individuals in Rwanda...</p>
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <h2>Our Values</h2>
-    <ul class="values-list">
-        <li><strong>Customer First:</strong> <span>We prioritize our customers' needs, offering services tailored to help them in their time of need.</span></li>
-        <li><strong>Transparency:</strong> <span>We ensure that all our terms and conditions are clear, with no hidden fees or surprises.</span></li>
-        <li><strong>Efficiency:</strong> <span>Our processes are streamlined to ensure that loans are approved and disbursed in the shortest time possible...</span></li>
-        <li><strong>Integrity:</strong> <span>We operate with honesty and fairness, ensuring that our customers trust us in every aspect of their financial journey.</span></li>
-    </ul>
-</section>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
-<section class="benefits">
-    <h2>Why Choose Kigali MicroLoans?</h2>
-    <ul class="values-list">
-        <li><strong>No Collateral Needed:</strong> <span>We don’t require collateral to approve loans. All we need is your commitment to repay...</span></li>
-        <li><strong>Fast Loan Disbursement:</strong> <span>Receive your loan within just one day to address urgent financial situations.</span></li>
-        <li><strong>Simple Application:</strong> <span>The application process is straightforward and user-friendly, ensuring you get the support you need with minimal hassle.</span></li>
-        <li><strong>Loan Amounts Tailored to Your Income:</strong> <span>We provide loans based on your monthly income, offering loans up to 500,000 RWF.</span></li>
-        <li><strong>Licensed and Regulated:</strong> <span>We are fully authorized and licensed by the National Bank of Rwanda (BNR) to provide financial services.</span></li>
-    </ul>
-</section>
+/* Header and Navigation Styles */
+header {
+    background-color: #0065A4;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-bar.show {
+        display: flex;
+    }
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* About Us Page Specific Styles */
+.intro h1 {
+    font-size: 28px;
+    color: #0065A4;
+}
+
+.intro h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.intro p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.mission h2, .benefits h2 {
+    font-size: 24px;
+    color: #0065A4;
+}
+
+.values-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.values-list li {
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.values-list li strong {
+    color: #0065A4;
+    margin-right: 10px;
+}
+/* Align main points in values and benefits sections */
+.values-list li {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: flex-start;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Set a fixed width for the strong element to ensure alignment */
+.values-list li strong {
+    color: #0065A4;
+    min-width: 150px; /* Adjust width as needed to align all points */
+    margin-right: 10px;
+    text-align: left;
+}
+
+/* Ensure that descriptions wrap next to the main points */
+.values-list li span {
+    flex-grow: 1; /* Allows descriptions to take the remaining space */
+}
