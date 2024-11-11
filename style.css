@@ -100,6 +100,29 @@ section {
     line-height: 1.6;
 }
 
+/* Align main points in values and benefits sections */
+.values-list li {
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: flex-start;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Set a fixed width for the strong element to ensure alignment */
+.values-list li strong {
+    color: #0065A4;
+    min-width: 150px; /* Adjust width as needed to align all points */
+    margin-right: 10px;
+    text-align: left;
+}
+
+/* Ensure that descriptions wrap next to the main points */
+.values-list li span {
+    flex-grow: 1; /* Allows descriptions to take the remaining space */
+}
+
+
 .values-list li strong {
     color: #0065A4;
     margin-right: 10px;
