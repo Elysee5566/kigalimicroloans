@@ -1,4 +1,4 @@
-/* Reset some default styles for consistent layout */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +11,7 @@ body {
     color: #333;
 }
 
+/* Header and Navigation Styles */
 header {
     background-color: #0065A4; /* Primary brand color */
     color: white;
@@ -86,7 +87,7 @@ header {
     }
 }
 
-/* Main content styles */
+/* Main Content Styles */
 main {
     padding: 20px;
     text-align: center;
@@ -101,7 +102,7 @@ section {
     border-radius: 8px;
 }
 
-/* About Us Specific Styles */
+/* About Us Page Specific Styles */
 .intro h1 {
     font-size: 28px;
     color: #0065A4;
@@ -123,7 +124,7 @@ section {
     color: #0065A4;
 }
 
-.mission p, .benefits ul {
+.mission p, .benefits p {
     font-size: 18px;
     color: #333;
     line-height: 1.6;
@@ -143,36 +144,32 @@ section {
     color: #0065A4;
 }
 
-/* Center headings */
+/* Values and Why Choose Us Dots Styling */
+.values-list {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    padding: 0 10px;
+}
+
+.values-list::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Add any additional styles for general page layout */
 h1, h3 {
     text-align: center;
 }
 
-/* Add spacing to paragraphs */
 p {
     margin: 20px auto;
     padding: 0 20px;
     max-width: 900px;
     text-align: justify;
 }
-
-ul {
-    padding-left: 20px;
-}
-
-/* Footer Section Styles (if you have one later) */
-footer {
-    background-color: #0065A4;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    font-size: 14px;
-}
-
-/* Add any other global styles for the website here */
