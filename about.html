@@ -1,10 +1,96 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>About Us</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Kigali MicroLoans</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>About Kigali MicroLoans</h1>
-    <p>We are here to provide fast, hassle-free personal loans to individuals in Rwanda. Our mission is to support those in need of urgent financial assistance.</p>
+    <!-- Header Section -->
+    <header>
+        <div class="header-left">
+            <img src="Logos/KML Logo.png" alt="KML Logo" class="logo-left">
+        </div>
+
+        <!-- Hamburger Icon for small screens -->
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; <!-- This is the hamburger icon -->
+        </div>
+
+        <!-- Page Title for Small Screens -->
+        <div class="page-title" id="page-title">
+            About Us
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="apply.html">Apply for a Loan</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <div class="header-right">
+            <img src="Logos/Umurabyo brand.png" alt="Umurabyo Logo" class="logo-right">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="intro">
+            <h1>Welcome to Kigali MicroLoans</h1>
+            <h3>Your Trusted Neighbourhood Lender</h3>
+            <p>At Kigali MicroLoans, we understand that life can throw unexpected challenges your way, and sometimes, you need immediate financial support. We are here to help individuals across Rwanda access fast, hassle-free personal loans, particularly during times of emergency.</p>
+            <p>Whether you're facing a medical emergency, need to pay school fees, or need urgent funds for any other personal matter, we're here to provide you with quick assistance. Our goal is to offer easy access to emergency loans with no collateral required, ensuring that the process is as fast and simple as possible.</p>
+        </section>
+
+        <!-- Our Mission and Values Section -->
+        <section class="mission">
+            <h2>Our Mission</h2>
+            <p>Our mission is to provide fast, reliable, and accessible loans to individuals in Rwanda, enabling them to resolve urgent financial needs without the stress of traditional lending processes. We aim to empower our customers by providing quick, affordable, and easy loan solutions that help them navigate life's unexpected hurdles.</p>
+
+            <h2>Our Values</h2>
+            <ul>
+                <li><strong>Customer First:</strong> We prioritize our customers' needs, offering services tailored to help them in their time of need.</li>
+                <li><strong>Transparency:</strong> We ensure that all our terms and conditions are clear, with no hidden fees or surprises.</li>
+                <li><strong>Efficiency:</strong> Our processes are streamlined to ensure that loans are approved and disbursed in the shortest time possible, so you can focus on what's important.</li>
+                <li><strong>Integrity:</strong> We operate with honesty and fairness, ensuring that our customers trust us in every aspect of their financial journey.</li>
+            </ul>
+        </section>
+
+        <!-- Benefits of Choosing KML Section -->
+        <section class="benefits">
+            <h2>Why Choose Kigali MicroLoans?</h2>
+            <ul>
+                <li><strong>No Collateral Needed:</strong> We don’t require collateral to approve loans. All we need is your commitment to repay and your eligibility.</li>
+                <li><strong>Fast Loan Disbursement:</strong> Receive your loan within just one day to address urgent financial situations.</li>
+                <li><strong>Simple Application:</strong> The application process is straightforward and user-friendly, ensuring you get the support you need with minimal hassle.</li>
+                <li><strong>Loan Amounts Tailored to Your Income:</strong> We provide loans based on your monthly income, offering loans up to 500,000 RWF.</li>
+                <li><strong>Licensed and Regulated:</strong> We are fully authorized and licensed by the National Bank of Rwanda (BNR) to provide financial services.</li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const navBar = document.querySelector('.nav-bar');
+            navBar.classList.toggle('show');
+        }
+
+        // Update the page title dynamically based on the current page
+        const currentPage = window.location.pathname.split('/').pop();
+        const pageTitle = document.getElementById('page-title');
+        
+        if (currentPage === 'index.html') {
+            pageTitle.textContent = 'Home';
+        } else if (currentPage === 'about.html') {
+            pageTitle.textContent = 'About Us';
+        } else if (currentPage === 'apply.html') {
+            pageTitle.textContent = 'Apply for a Loan';
+        } else if (currentPage === 'contact.html') {
+            pageTitle.textContent = 'Contact Us';
+        }
+    </script>
 </body>
 </html>
