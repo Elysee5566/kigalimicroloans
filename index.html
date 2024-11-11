@@ -10,7 +10,7 @@
     <!-- Header Section -->
     <header>
         <div class="header-left">
-            <img src="Logos\KML Logo.png" alt="KML Logo" class="logo">
+            <img src="Logos/KML Logo.png" alt="KML Logo" class="logo">
         </div>
 
         <!-- Hamburger Icon for small screens -->
@@ -32,7 +32,7 @@
         </nav>
 
         <div class="header-right">
-            <img src="Logos\Umurabyo brand.png" alt="Umurabyo Logo" class="logo">
+            <img src="Logos/Umurabyo brand.png" alt="Umurabyo Logo" class="logo">
         </div>
     </header>
 
@@ -43,7 +43,8 @@
             <h3>Your Trusted Neighbourhood Lender</h3>
             <p>At Kigali MicroLoans, we understand that life can bring unexpected challenges, and sometimes, you need immediate financial support. We are here to help individuals in Rwanda access fast, hassle-free personal loans to solve urgent problems. Whether you need money for medical emergencies, school fees, or other urgent needs, we're here to provide quick assistance.</p>
         </section>
-                <!-- Image Carousel Section -->
+
+        <!-- Image Carousel Section -->
         <section class="image-carousel">
             <img src="Fliers/Flyer1.png" alt="Flyer 1" class="carousel-image">
             <img src="Fliers/Flyer2.jpeg" alt="Flyer 2" class="carousel-image">
@@ -52,6 +53,7 @@
     </main>
 
     <script>
+        // Toggle Navigation Menu for Mobile Screens
         function toggleMenu() {
             const navBar = document.querySelector('.nav-bar');
             navBar.style.display = (navBar.style.display === 'flex') ? 'none' : 'flex';
@@ -70,51 +72,29 @@
         } else if (currentPage === 'contact.html') {
             pageTitle.textContent = 'Contact Us';
         }
+
+        // Image Carousel Functionality
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-image');
+        const totalImages = images.length;
+
+        function changeImage() {
+            // Remove 'active' class from current image
+            images[currentIndex].classList.remove('active');
+            
+            // Update index (go to the next image, loop back to the first one)
+            currentIndex = (currentIndex + 1) % totalImages;
+            
+            // Add 'active' class to the next image
+            images[currentIndex].classList.add('active');
+        }
+
+        // Change image every 5 seconds
+        setInterval(changeImage, 5000);
+
+        // Initially show the first image
+        images[currentIndex].classList.add('active');
     </script>
-    <script>
-    let currentIndex = 0;
-    const images = document.querySelectorAll('.carousel-image');
-    const totalImages = images.length;
-
-    function changeImage() {
-        // Remove 'active' class from current image
-        images[currentIndex].classList.remove('active');
-        
-        // Update index (go to the next image, loop back to the first one)
-        currentIndex = (currentIndex + 1) % totalImages;
-        
-        // Add 'active' class to the next image
-        images[currentIndex].classList.add('active');
-    }
-
-    // Change image every 5 seconds
-    setInterval(changeImage, 5000);
-
-    // Initially show the first image
-    images[currentIndex].classList.add('active');
-</script>
-<script>
-    let currentIndex = 0;
-    const images = document.querySelectorAll('.carousel-image');
-    const totalImages = images.length;
-
-    function changeImage() {
-        // Remove 'active' class from current image
-        images[currentIndex].classList.remove('active');
-        
-        // Update index (go to the next image, loop back to the first one)
-        currentIndex = (currentIndex + 1) % totalImages;
-        
-        // Add 'active' class to the next image
-        images[currentIndex].classList.add('active');
-    }
-
-    // Change image every 5 seconds
-    setInterval(changeImage, 5000);
-
-    // Initially show the first image
-    images[currentIndex].classList.add('active');
-</script>
 
 </body>
 </html>
