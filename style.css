@@ -8,6 +8,8 @@
 /* Body Style */
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px; /* Add space around the content */
 }
 
 /* Header Style */
@@ -30,6 +32,23 @@ header {
 .nav-bar {
     display: flex;
     gap: 15px;
+    background-color: #0065A4; /* Custom background color */
+    padding: 10px;
+    border-radius: 8px; /* Optional: add rounded corners */
+}
+
+/* Nav links styling */
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    font-size: 16px;
+}
+
+/* Hover effect on nav links */
+.nav-bar a:hover {
+    background-color: #005182;
+    border-radius: 5px;
 }
 
 /* Hamburger icon - only visible on small screens */
@@ -98,6 +117,14 @@ h1, h3 {
     text-align: center;
 }
 
+/* Add spacing to paragraphs */
+p {
+    margin: 20px auto; /* Adds space at the top and bottom */
+    padding: 0 20px; /* Adds padding on both sides */
+    max-width: 900px; /* Limits the width of the paragraph */
+    text-align: justify; /* Justify text for better readability */
+}
+
 /* Basic styles for the carousel */
 .image-carousel {
     position: relative;
@@ -105,6 +132,13 @@ h1, h3 {
     max-width: 1000px; /* Or any specific width */
     margin: 20px auto; /* Center the carousel */
     overflow: hidden;
+}
+
+/* Container for carousel images */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 /* Carousel image styles */
