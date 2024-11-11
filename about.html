@@ -41,24 +41,25 @@
         <section class="intro">
             <h1>Welcome to Kigali MicroLoans</h1>
             <h3>Your Trusted Neighbourhood Lender</h3>
-            <p>At Kigali MicroLoans, we understand that life can bring unexpected challenges, and sometimes, you need immediate financial support. We are here to help individuals in Rwanda access fast, hassle-free personal loans to solve urgent problems. Whether you need money for medical emergencies, school fees, or other urgent needs, we're here to provide quick assistance.</p>
+            <p>At Kigali MicroLoans, we understand that life can throw unexpected challenges your way, and sometimes, you need immediate financial support. We are here to help individuals across Rwanda access fast, hassle-free personal loans, particularly during times of emergency.</p>
+            <p>Whether you're facing a medical emergency, need to pay school fees, or need urgent funds for any other personal matter, we're here to provide you with quick assistance. Our goal is to offer easy access to emergency loans with no collateral required, ensuring that the process is as fast and simple as possible.</p>
         </section>
 
+        <!-- Our Mission and Values Section -->
         <section class="mission">
             <h2>Our Mission</h2>
-            <p>We are dedicated to helping individuals in Rwanda overcome unexpected financial challenges by providing fast, accessible, and hassle-free loans to those in need. Our mission is to offer the financial support you need during urgent situations, with a focus on customer satisfaction and community well-being.</p>
-        </section>
+            <p>Our mission is to provide fast, reliable, and accessible loans to individuals in Rwanda, enabling them to resolve urgent financial needs without the stress of traditional lending processes. We aim to empower our customers by providing quick, affordable, and easy loan solutions that help them navigate life's unexpected hurdles.</p>
 
-        <section class="values">
             <h2>Our Values</h2>
-            <p>Integrity · Efficiency · Accessibility · Trust</p>
-            <p>We stand by our core values that guide our commitment to excellence in serving our customers. Our dedication to integrity ensures that we are always transparent and honest in our dealings. Efficiency drives us to process loans quickly and with minimal hassle. Accessibility ensures that anyone in need of a loan can easily apply and receive assistance. Trust is the foundation of our relationship with our customers, as we work to earn and maintain your confidence.</p>
+            <p class="values-list">Customer First · Transparency · Efficiency · Integrity</p>
+            <p>We believe that these core values are what make us stand out as a reliable financial service provider. We are committed to upholding these values in every interaction and loan we provide.</p>
         </section>
 
+        <!-- Benefits of Choosing KML Section -->
         <section class="benefits">
-            <h2>Why Choose Us</h2>
-            <p>No Collateral Needed · Fast Disbursement · Easy Application Process · Licensed and Regulated · Affordable Interest Rates</p>
-            <p>Choosing Kigali MicroLoans means that you can expect quick and hassle-free financial support during emergencies. With no collateral required, we make it easy for anyone with a job and bank account to apply. We also ensure fast disbursement, meaning you will receive your loan within one day. Our simple application process makes it easy for you to get the help you need. As a licensed and regulated entity, you can trust that we operate with full compliance to Rwandan financial laws. Additionally, we offer affordable interest rates to ensure that our loans are manageable and cost-effective for all our clients.</p>
+            <h2>Why Choose Kigali MicroLoans?</h2>
+            <p class="values-list">No Collateral Needed · Fast Loan Disbursement · Simple Application · Loan Amounts Tailored to Your Income · Licensed and Regulated</p>
+            <p>With our simple and quick loan process, you don't need to worry about collateral, and you can access funds in no time to address your urgent financial needs. We are licensed and regulated by BNR, ensuring that your loan experience is both safe and transparent.</p>
         </section>
     </main>
 
@@ -66,6 +67,20 @@
         function toggleMenu() {
             const navBar = document.querySelector('.nav-bar');
             navBar.classList.toggle('show');
+        }
+
+        // Update the page title dynamically based on the current page
+        const currentPage = window.location.pathname.split('/').pop();
+        const pageTitle = document.getElementById('page-title');
+        
+        if (currentPage === 'index.html') {
+            pageTitle.textContent = 'Home';
+        } else if (currentPage === 'about.html') {
+            pageTitle.textContent = 'About Us';
+        } else if (currentPage === 'apply.html') {
+            pageTitle.textContent = 'Apply for a Loan';
+        } else if (currentPage === 'contact.html') {
+            pageTitle.textContent = 'Contact Us';
         }
     </script>
 </body>
