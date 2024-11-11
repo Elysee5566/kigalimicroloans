@@ -169,6 +169,11 @@ p {
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* Active image styles */
 .carousel-image.active {
