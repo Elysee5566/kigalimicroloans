@@ -1,133 +1,146 @@
-/* Basic Reset */
+/* Reset some default styles for consistent layout */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Style */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    padding: 20px; /* Add space around the content */
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Header Style */
 header {
+    background-color: #0065A4; /* Primary brand color */
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #f0f0f0;
+    padding: 15px 20px;
 }
 
-/* Logo styling */
-.logo-left, .logo-right {
-    width: 120px; /* Adjust logo width */
-    height: auto;
-    object-fit: contain;
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
 }
 
-/* Full navigation bar - visible on larger screens */
+.header-left img, .header-right img {
+    width: 120px; /* Adjust size as necessary */
+}
+
 .nav-bar {
     display: flex;
-    gap: 15px;
-    background-color: #0065A4; /* Custom background color */
-    padding: 10px;
-    border-radius: 8px; /* Optional: add rounded corners */
-}
-
-/* Nav links styling */
-.nav-bar a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 15px;
+    justify-content: space-around;
+    width: 40%;
     font-size: 16px;
 }
 
-/* Hover effect on nav links */
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
 .nav-bar a:hover {
-    background-color: #005182;
+    background-color: #004F72;
     border-radius: 5px;
 }
 
-/* Hamburger icon - only visible on small screens */
 .hamburger {
     display: none;
-    font-size: 24px;
+    font-size: 30px;
     cursor: pointer;
 }
 
-/* Page Title - Display next to the hamburger icon */
 .page-title {
-    display: inline-block;
-    font-size: 18px;
-    font-weight: bold;
-    margin-left: 10px;
-    color: #000;
-    line-height: 40px; /* Adjust based on the header height */
+    display: none;
+    color: white;
+    font-size: 20px;
+    text-align: center;
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
-    /* Align the logo and title properly on small screens */
-    .header-left, .header-right {
-        display: inline-block;
-        width: auto;
-    }
-
-    .page-title {
-        font-size: 16px; /* Adjust the font size for small screens */
-    }
-
-    /* Hide full navigation on mobile */
     .nav-bar {
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        background-color: #0065A4; /* Matching the header color */
+        align-items: center;
         width: 100%;
-        left: 0;
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
     }
 
-    /* Show hamburger on mobile */
     .hamburger {
         display: block;
     }
 
-    /* Adjust logo and title layout on small screens */
-    header {
-        justify-content: space-between;
+    .nav-bar.show {
+        display: flex;
     }
 
     .header-left, .header-right {
-        display: flex;
-        align-items: center;
+        display: none;
     }
 
-    .nav-bar a {
-        font-size: 16px;
-        color: white;
-        text-align: center; /* Ensure links are centered */
-        padding: 10px;
-        background-color: #0065A4; /* Keep the background color for each item */
-        border-radius: 5px;
-        margin-bottom: 5px; /* Space between items */
+    .page-title {
+        display: block;
     }
+}
 
-    /* Show dropdown links when the hamburger is clicked */
-    .nav-bar a:hover {
-        background-color: #005182; /* Change background on hover */
-    }
+/* Main content styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
 
-    /* Ensure the dropdown list is visible */
-    .nav-bar.show {
-        display: flex !important; /* Force display of the dropdown menu */
-    }
+section {
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* About Us Specific Styles */
+.intro h1 {
+    font-size: 28px;
+    color: #0065A4;
+}
+
+.intro h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.intro p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.mission h2, .benefits h2 {
+    font-size: 24px;
+    color: #0065A4;
+}
+
+.mission p, .benefits ul {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.mission ul, .benefits ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.mission ul li, .benefits ul li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.mission ul li strong, .benefits ul li strong {
+    color: #0065A4;
 }
 
 /* Center headings */
@@ -137,45 +150,29 @@ h1, h3 {
 
 /* Add spacing to paragraphs */
 p {
-    margin: 20px auto; /* Adds space at the top and bottom */
-    padding: 0 20px; /* Adds padding on both sides */
-    max-width: 900px; /* Limits the width of the paragraph */
-    text-align: justify; /* Justify text for better readability */
+    margin: 20px auto;
+    padding: 0 20px;
+    max-width: 900px;
+    text-align: justify;
 }
 
-/* Basic styles for the carousel */
-.image-carousel {
+ul {
+    padding-left: 20px;
+}
+
+/* Footer Section Styles (if you have one later) */
+footer {
+    background-color: #0065A4;
+    color: white;
+    text-align: center;
+    padding: 10px;
     position: relative;
+    bottom: 0;
     width: 100%;
-    max-width: 1000px; /* Or any specific width */
-    margin: 20px auto; /* Center the carousel */
-    overflow: hidden;
 }
 
-/* Container for carousel images */
-.carousel-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+footer p {
+    font-size: 14px;
 }
 
-/* Carousel image styles */
-.carousel-image {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-/* Active image styles */
-.carousel-image.active {
-    opacity: 1;
-}
+/* Add any other global styles for the website here */
