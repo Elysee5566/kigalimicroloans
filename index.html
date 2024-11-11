@@ -93,6 +93,28 @@
     // Initially show the first image
     images[currentIndex].classList.add('active');
 </script>
+<script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carousel-image');
+    const totalImages = images.length;
+
+    function changeImage() {
+        // Remove 'active' class from current image
+        images[currentIndex].classList.remove('active');
+        
+        // Update index (go to the next image, loop back to the first one)
+        currentIndex = (currentIndex + 1) % totalImages;
+        
+        // Add 'active' class to the next image
+        images[currentIndex].classList.add('active');
+    }
+
+    // Change image every 5 seconds
+    setInterval(changeImage, 5000);
+
+    // Initially show the first image
+    images[currentIndex].classList.add('active');
+</script>
 
 </body>
 </html>
