@@ -8,6 +8,7 @@
 /* Body Style */
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6; /* Ensures good readability */
 }
 
 /* Header Style */
@@ -17,9 +18,9 @@ header {
     align-items: center;
     padding: 10px;
     background-color: #f0f0f0;
+    position: relative;
 }
 
-/* Logo styling */
 .logo-left, .logo-right {
     width: 50px;
 }
@@ -45,6 +46,15 @@ header {
     margin-left: 10px;
     color: #000;
     line-height: 40px; /* Adjust based on the header height */
+}
+
+/* Paragraph styles for better readability on all devices */
+p {
+    margin: 20px 0;
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: justify; /* Justify text for better paragraph structure */
+    color: #333;
 }
 
 /* Mobile styles */
@@ -89,42 +99,42 @@ header {
     .nav-bar a {
         font-size: 16px;
     }
-    /* Basic styles for the carousel */
-.image-carousel {
-    position: relative;
-    width: 100%;
-    max-width: 1000px; /* Or any specific width */
-    margin: 0 auto;
-    overflow: hidden;
-}
 
-.carousel-image {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
+    /* Carousel image styles */
+    .image-carousel {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
 
-/* Active image styles */
-.carousel-image.active {
-    opacity: 1;
-}
+    .carousel-image {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
 
+    .carousel-image.active {
+        opacity: 1;
+    }
 
     .nav-bar a:hover {
         color: #007bff;
     }
 }
-/* Basic styles for the carousel */
+
+/* Full-page styles for the carousel */
 .image-carousel {
     position: relative;
     width: 100%;
     max-width: 1000px; /* Or any specific width */
-    margin: 0 auto;
+    margin: 20px auto;
     overflow: hidden;
+    border-radius: 10px; /* Optional: Add rounded corners */
 }
 
 .carousel-image {
