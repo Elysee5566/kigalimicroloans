@@ -1,13 +1,126 @@
-/* About Us Page Section */
-.mission, .benefits {
+/* Reset some default styles for consistent layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #0065A4; /* Primary brand color */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.header-left, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-left img, .header-right img {
+    width: 120px; /* Adjust size as necessary */
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    font-size: 16px;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.nav-bar a:hover {
+    background-color: #004F72;
+    border-radius: 5px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.page-title {
+    display: none;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-bar.show {
+        display: flex;
+    }
+
+    .header-left, .header-right {
+        display: none;
+    }
+
+    .page-title {
+        display: block;
+    }
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+section {
     margin: 20px auto;
     max-width: 900px;
-    text-align: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* About Us Specific Styles */
+.intro h1 {
+    font-size: 28px;
+    color: #0065A4;
+}
+
+.intro h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.intro p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 15px 0;
 }
 
 .mission h2, .benefits h2 {
     font-size: 24px;
-    color: #0065A4; /* Match with the primary branding color */
+    color: #0065A4;
 }
 
 .mission p, .benefits ul {
@@ -37,8 +150,29 @@ h1, h3 {
 
 /* Add spacing to paragraphs */
 p {
-    margin: 20px auto; /* Adds space at the top and bottom */
-    padding: 0 20px; /* Adds padding on both sides */
-    max-width: 900px; /* Limits the width of the paragraph */
-    text-align: justify; /* Justify text for better readability */
+    margin: 20px auto;
+    padding: 0 20px;
+    max-width: 900px;
+    text-align: justify;
 }
+
+ul {
+    padding-left: 20px;
+}
+
+/* Footer Section Styles (if you have one later) */
+footer {
+    background-color: #0065A4;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Add any other global styles for the website here */
