@@ -46,19 +46,16 @@
 
         <!-- Image Carousel Section -->
         <section class="image-carousel">
-            <div class="carousel-container">
-                <img src="https://raw.githubusercontent.com/Elysee5566/kigalimicroloans/main/Fliers/Flier1.png" alt="Flyer 1" class="carousel-image">
-                <img src="https://raw.githubusercontent.com/Elysee5566/kigalimicroloans/main/Fliers/Flier2.jpeg" alt="Flyer 2" class="carousel-image">
-                <img src="https://raw.githubusercontent.com/Elysee5566/kigalimicroloans/main/Fliers/Flier3.jpeg" alt="Flyer 3" class="carousel-image">
-            </div>
+            <img src="Fliers/Flyer1.png" alt="Flyer 1" class="carousel-image">
+            <img src="Fliers/Flyer2.jpeg" alt="Flyer 2" class="carousel-image">
+            <img src="Fliers/Flyer3.jpeg" alt="Flyer 3" class="carousel-image">
         </section>
     </main>
 
     <script>
-        // Toggle Navigation Menu for Mobile Screens
         function toggleMenu() {
             const navBar = document.querySelector('.nav-bar');
-            navBar.style.display = (navBar.style.display === 'flex') ? 'none' : 'flex';
+            navBar.classList.toggle('show');
         }
 
         // Update the page title dynamically based on the current page
@@ -74,29 +71,6 @@
         } else if (currentPage === 'contact.html') {
             pageTitle.textContent = 'Contact Us';
         }
-
-        // Image Carousel Functionality
-        let currentIndex = 0;
-        const images = document.querySelectorAll('.carousel-image');
-        const totalImages = images.length;
-
-        function changeImage() {
-            // Remove 'active' class from current image
-            images[currentIndex].classList.remove('active');
-            
-            // Update index (go to the next image, loop back to the first one)
-            currentIndex = (currentIndex + 1) % totalImages;
-            
-            // Add 'active' class to the next image
-            images[currentIndex].classList.add('active');
-        }
-
-        // Change image every 5 seconds
-        setInterval(changeImage, 5000);
-
-        // Initially show the first image
-        images[currentIndex].classList.add('active');
     </script>
-
 </body>
 </html>
