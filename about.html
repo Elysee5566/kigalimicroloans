@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Kigali MicroLoans</title>
+    <title>Contact Us - Kigali MicroLoans</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,25 +12,14 @@
         <div class="header-left">
             <img src="Logos/KML Logo.png" alt="KML Logo" class="logo-left">
         </div>
-
-        <!-- Hamburger Icon for small screens -->
-        <div class="hamburger" onclick="toggleMenu()">
-            &#9776; <!-- This is the hamburger icon -->
-        </div>
-
-        <!-- Page Title for Small Screens -->
-        <div class="page-title" id="page-title">
-            About Us
-        </div>
-
-        <!-- Navigation Bar -->
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <div class="page-title" id="page-title">Contact Us</div>
         <nav class="nav-bar">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="apply.html">Apply for a Loan</a>
             <a href="contact.html">Contact Us</a>
         </nav>
-
         <div class="header-right">
             <img src="Logos/Umurabyo brand.png" alt="Umurabyo Logo" class="logo-right">
         </div>
@@ -38,61 +27,57 @@
 
     <!-- Main Content -->
     <main>
-        <section class="intro">
-            <h1>Welcome to Kigali MicroLoans</h1>
-            <h3>Your Trusted Neighbourhood Lender</h3>
-            <p>At Kigali MicroLoans, we understand that life can throw unexpected challenges your way, and sometimes, you need immediate financial support. We are here to help individuals across Rwanda access fast, hassle-free personal loans, particularly during times of emergency.</p>
-            <p>Whether you're facing a medical emergency, need to pay school fees, or need urgent funds for any other personal matter, we're here to provide you with quick assistance. Our goal is to offer easy access to emergency loans with no collateral required, ensuring that the process is as fast and simple as possible.</p>
+        <section class="contact-info">
+            <h1>Contact Information</h1>
+            <p>If you have any questions or need assistance, please reach out to us using the contact details below:</p>
+            
+            <div class="contact-details">
+                <div class="detail">
+                    <strong>Email:</strong>
+                    <a href="mailto:kigalimicroloans@gmail.com">kigalimicroloans@gmail.com</a>
+                </div>
+                <div class="detail">
+                    <strong>Phone Numbers:</strong>
+                    <p>0781001491, 0784603391, 0798117214</p>
+                </div>
+                <div class="detail">
+                    <strong>Location:</strong>
+                    <p>Nyamirambo, Basil Heights, 2nd floor, P.O. Box 677 Kigali</p>
+                </div>
+            </div>
         </section>
 
-        <!-- Our Mission and Values Section -->
-        <section class="mission">
-            <h2>Our Mission</h2>
-            <p>Our mission is to provide fast, reliable, and accessible loans to individuals in Rwanda, enabling them to resolve urgent financial needs without the stress of traditional lending processes. We aim to empower our customers by providing quick, affordable, and easy loan solutions that help them navigate life's unexpected hurdles.</p>
-
-            <h2>Our Values</h2>
-            <ul>
-                <li><strong>Customer First:</strong> We prioritize our customers' needs, offering services tailored to help them in their time of need.</li>
-                <li><strong>Transparency:</strong> We ensure that all our terms and conditions are clear, with no hidden fees or surprises.</li>
-                <li><strong>Efficiency:</strong> Our processes are streamlined to ensure that loans are approved and disbursed in the shortest time possible, so you can focus on what's important.</li>
-                <li><strong>Integrity:</strong> We operate with honesty and fairness, ensuring that our customers trust us in every aspect of their financial journey.</li>
-            </ul>
+        <section class="social-media">
+            <h2>Follow Us</h2>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/company/kigali-microloans/" target="_blank">
+                    <img src="Icons/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://x.com/KigaliM77493/" target="_blank">
+                    <img src="Icons/twitter.png" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com/kigalimicroloans/" target="_blank">
+                    <img src="Icons/instagram.png" alt="Instagram">
+                </a>
+            </div>
         </section>
 
-        <!-- Benefits of Choosing KML Section -->
-        <section class="benefits">
-            <h2>Why Choose Kigali MicroLoans?</h2>
-            <ul>
-                <li><strong>No Collateral Needed:</strong> We don’t require collateral to approve loans. All we need is your commitment to repay and your eligibility.</li>
-                <li><strong>Fast Loan Disbursement:</strong> Receive your loan within just one day to address urgent financial situations.</li>
-                <li><strong>Simple Application:</strong> The application process is straightforward and user-friendly, ensuring you get the support you need with minimal hassle.</li>
-                <li><strong>Loan Amounts Tailored to Your Income:</strong> We provide loans based on your monthly income, offering loans up to 500,000 RWF.</li>
-                <li><strong>Licensed and Regulated:</strong> We are fully authorized and licensed by the National Bank of Rwanda (BNR) to provide financial services.</li>
-            </ul>
+        <!-- Location Map -->
+        <section class="location-map">
+            <h2>Our Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3186.473575697783!2d30.0569308!3d-1.9496738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d91b3da22a37e7%3A0xe779b18e0e8974c2!2sBasil%20Heights%2C%20Nyamirambo%2C%20Kigali!5e0!3m2!1sen!2srw!4v1718153065295!5m2!1sen!2srw" 
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </section>
     </main>
-    <!-- Footer Section -->
+
     <footer>
-        <p>&copy; 2024 Kigali MicroLoans. All Rights Reserved.</p>
+        <p>&copy; 2024 Kigali MicroLoans. All rights reserved.</p>
     </footer>
+
     <script>
         function toggleMenu() {
             const navBar = document.querySelector('.nav-bar');
             navBar.classList.toggle('show');
-        }
-
-        // Update the page title dynamically based on the current page
-        const currentPage = window.location.pathname.split('/').pop();
-        const pageTitle = document.getElementById('page-title');
-        
-        if (currentPage === 'index.html') {
-            pageTitle.textContent = 'Home';
-        } else if (currentPage === 'about.html') {
-            pageTitle.textContent = 'About Us';
-        } else if (currentPage === 'apply.html') {
-            pageTitle.textContent = 'Apply for a Loan';
-        } else if (currentPage === 'contact.html') {
-            pageTitle.textContent = 'Contact Us';
         }
     </script>
 </body>
