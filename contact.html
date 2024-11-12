@@ -1,84 +1,184 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Kigali MicroLoans</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <div class="header-left">
-            <img src="Logos/KML Logo.png" alt="KML Logo" class="logo-left">
-        </div>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-        <div class="page-title" id="page-title">Contact Us</div>
-        <nav class="nav-bar">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="apply.html">Apply for a Loan</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-        <div class="header-right">
-            <img src="Logos/Umurabyo brand.png" alt="Umurabyo Logo" class="logo-right">
-        </div>
-    </header>
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- Main Content -->
-    <main>
-        <section class="contact-info">
-            <h1>Contact Information</h1>
-            <p>If you have any questions or need assistance, please reach out to us using the contact details below:</p>
-            
-            <div class="contact-details">
-                <div class="detail">
-                    <strong>Email:</strong>
-                    <a href="mailto:kigalimicroloans@gmail.com">kigalimicroloans@gmail.com</a>
-                </div>
-                <div class="detail">
-                    <strong>Phone Numbers:</strong>
-                    <p>0781001491, 0784603391, 0798117214</p>
-                </div>
-                <div class="detail">
-                    <strong>Location:</strong>
-                    <p>Nyamirambo, Basil Heights, 2nd floor, P.O. Box 677 Kigali</p>
-                </div>
-            </div>
-        </section>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
-        <section class="social-media">
-            <h2>Follow Us</h2>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/company/kigali-microloans/" target="_blank">
-                    <img src="Icons/linkedin.png" alt="LinkedIn">
-                </a>
-                <a href="https://x.com/KigaliM77493/" target="_blank">
-                    <img src="Icons/twitter.png" alt="Twitter">
-                </a>
-                <a href="https://www.instagram.com/kigalimicroloans/" target="_blank">
-                    <img src="Icons/instagram.png" alt="Instagram">
-                </a>
-            </div>
-        </section>
+/* Header styles */
+header {
+    background-color: #0065A4; /* Primary brand color */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
 
-        <!-- Location Map -->
-        <section class="location-map">
-            <h2>Our Location</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3186.473575697783!2d30.0569308!3d-1.9496738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d91b3da22a37e7%3A0xe779b18e0e8974c2!2sBasil%20Heights%2C%20Nyamirambo%2C%20Kigali!5e0!3m2!1sen!2srw!4v1718153065295!5m2!1sen!2srw" 
-                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </section>
-    </main>
+/* Left logo, title, and right logo */
+.header-left img, .header-right img {
+    width: 100px; /* Default logo size on desktop */
+    height: auto;
+    display: inline; /* Ensure logos are always displayed */
+}
 
-    <footer>
-        <p>&copy; 2024 Kigali MicroLoans. All rights reserved.</p>
-    </footer>
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    width: 50%; /* Adjust width of navigation links */
+    font-size: 16px;
+}
 
-    <script>
-        function toggleMenu() {
-            const navBar = document.querySelector('.nav-bar');
-            navBar.classList.toggle('show');
-        }
-    </script>
-</body>
-</html>
+/* Navigation links */
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.nav-bar a:hover {
+    background-color: #004F72;
+    border-radius: 5px;
+}
+
+/* Hamburger menu icon for mobile */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Centered page title for small screens */
+.page-title {
+    display: none;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Adjust logo size for smaller screens */
+    .header-left img, .header-right img {
+        width: 70px; /* Smaller logo size for mobile */
+        height: auto;
+        display: inline-block; /* Ensure logos display on mobile */
+        vertical-align: middle; /* Keep logos vertically aligned */
+    }
+
+    /* Show hamburger and hide navigation links */
+    .hamburger {
+        display: block;
+    }
+
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-bar.show {
+        display: flex;
+    }
+
+    /* Contact details phone numbers displayed vertically on small screens */
+    .contact-details .detail p {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+/* Main content styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Section styling */
+section {
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.intro h1 {
+    font-size: 28px;
+    color: #0065A4;
+}
+
+.intro h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.intro p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.mission h2, .benefits h2 {
+    font-size: 24px;
+    color: #0065A4;
+}
+
+.mission p, .benefits ul {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.mission ul, .benefits ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.mission ul li, .benefits ul li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.mission ul li strong, .benefits ul li strong {
+    color: #0065A4;
+}
+
+/* Center headings */
+h1, h3 {
+    text-align: center;
+}
+
+/* Add spacing to paragraphs */
+p {
+    margin: 20px auto;
+    padding: 0 20px;
+    max-width: 900px;
+    text-align: justify;
+}
+
+ul {
+    padding-left: 20px;
+
+/* Footer Section Styles */
+footer {
+    background-color: #0065A4;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 14px;
+}
