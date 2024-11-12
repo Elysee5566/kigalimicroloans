@@ -15,8 +15,9 @@ header {
     justify-content: space-between;
 }
 
-.header-left, .header-right {
-    flex: 1;
+.header-left img, .header-right img {
+    max-width: 150px; /* Adjust the logo size */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .page-title {
