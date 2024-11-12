@@ -15,9 +15,15 @@ header {
     justify-content: space-between;
 }
 
-.header-left img, .header-right img {
-    max-width: 150px; /* Adjust the logo size */
-    height: auto; /* Maintain aspect ratio */
+/* Fix the logo size specifically */
+.header-left img {
+    max-width: 120px; /* Limit the max width of KML logo */
+    height: auto;
+}
+
+.header-right img {
+    max-width: 120px; /* Limit the max width of Umurabyo logo */
+    height: auto;
 }
 
 .page-title {
