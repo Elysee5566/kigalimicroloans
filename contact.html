@@ -1,102 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Kigali MicroLoans</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Header Section (use the same header from previous pages) -->
-    <header>
-        <div class="header-left">
-            <img src="Logos/KML Logo.png" alt="KML Logo" class="logo-left">
+<div class="contact-container">
+    <h2>Contact Us</h2>
+    <p>Reach out to us through any of the following methods. Our team is here to assist you with any inquiries or support needs.</p>
+
+    <div class="contact-details">
+        <div class="contact-item">
+            <h3>Email</h3>
+            <p><a href="mailto:kigalimicroloans@gmail.com">kigalimicroloans@gmail.com</a></p>
         </div>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-        <div class="page-title" id="page-title">Contact Us</div>
-        <nav class="nav-bar">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="apply.html">Apply for a Loan</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-        <div class="header-right">
-            <img src="Logos/Umurabyo brand.png" alt="Umurabyo Logo" class="logo-right">
+
+        <div class="contact-item">
+            <h3>Phone Numbers</h3>
+            <p><a href="tel:+250781001491">0781001491</a></p>
+            <p><a href="tel:+250784603391">0784603391</a></p>
+            <p><a href="tel:+250798117214">0798117214</a></p>
         </div>
-    </header>
 
-    <!-- Main Content -->
-    <main>
-        <section class="contact-info">
-            <h1>Contact Us</h1>
-            <p>If you have any questions, feel free to reach out to us via the following contact details or by filling out the form below.</p>
+        <div class="contact-item">
+            <h3>Location</h3>
+            <p>Nyamirambo, Basil Heights, 2nd floor</p>
+            <p>P.O. Box 677, Kigali</p>
+        </div>
+    </div>
 
-            <div class="contact-details">
-                <h2>Contact Details</h2>
-                <p><strong>Email:</strong> kigalimicroloans@gmail.com</p>
-                <p><strong>Phone:</strong></p>
-                <ul>
-                    <li>0781001491</li>
-                    <li>0784603391</li>
-                    <li>0798117214</li>
-                </ul>
-                <p><strong>Location:</strong> Nyamirambo, Basil Heights, 2nd floor</p>
-                <p><strong>P.O. Box:</strong> 677 Kigali</p>
-            </div>
-
-            <div class="social-media">
-                <h2>Connect with Us</h2>
-                <p>Follow us on our social media platforms:</p>
-                <ul>
-                    <li><a href="https://twitter.com/kigalimicroloans" target="_blank">Twitter</a></li>
-                    <li><a href="https://linkedin.com/company/kigalimicroloans" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://instagram.com/kigalimicroloans" target="_blank">Instagram</a></li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Contact Form Section -->
-        <section class="contact-form">
-            <h2>Send Us a Message</h2>
-            <form action="submit_contact_form.php" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-
-        <!-- Map Section -->
-        <section class="map">
-            <h2>Find Us</h2>
-            <p>Visit us at our office location:</p>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31521.343254895925!2d30.058735!3d-1.9705784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca749f1f0f9db%3A0x36a7ff2825b2db21!2sNyamirambo%2C%20Kigali!5e0!3m2!1sen!2srw!4v1662992479023!5m2!1sen!2srw" 
-                width="100%" 
-                height="300" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </section>
-    </main>
-
-    <script>
-        function toggleMenu() {
-            const navBar = document.querySelector('.nav-bar');
-            navBar.classList.toggle('show');
-        }
-        // Update page title dynamically
-        const currentPage = window.location.pathname.split('/').pop();
-        const pageTitle = document.getElementById('page-title');
-        if (currentPage === 'contact.html') pageTitle.textContent = 'Contact Us';
-    </script>
-</body>
-</html>
+    <div class="social-media">
+        <h3>Follow Us</h3>
+        <a href="https://www.linkedin.com/company/kigali-microloans/" target="_blank">LinkedIn</a>
+        <a href="https://x.com/KigaliM77493/" target="_blank">Twitter</a>
+        <a href="https://www.instagram.com/kigalimicroloans/" target="_blank">Instagram</a>
+    </div>
+</div>
