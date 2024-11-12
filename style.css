@@ -29,15 +29,16 @@ header {
 
 .nav-bar {
     display: flex;
-    gap: 20px;
+    gap: 15px;  /* Reduced gap */
     align-items: center;
 }
 
 .nav-bar a {
-    font-size: 14px;  /* Adjust font size */
+    font-size: 13px;  /* Reduced font size */
     color: #fff;
     text-decoration: none;
-    padding: 10px 15px;  /* Adjust padding */
+    padding: 8px 12px;  /* Adjusted padding */
+    white-space: nowrap;  /* Prevent wrapping */
 }
 
 .nav-bar a:hover {
@@ -112,7 +113,7 @@ footer {
     .nav-bar {
         display: none;
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;  /* Reduced gap */
         width: 100%;
     }
 
@@ -125,7 +126,9 @@ footer {
     }
 
     .nav-bar a {
-        font-size: 12px;  /* Adjust font size further for small screens */
+        font-size: 11px;  /* Further reduced font size for small screens */
+        padding: 8px 10px;  /* Reduced padding for small screens */
+        white-space: normal;  /* Allow text to wrap if needed */
     }
 
     .contact-details p {
