@@ -25,7 +25,7 @@ header {
 .header-left img, .header-right img {
     width: 100px; /* Default logo size on desktop */
     height: auto;
-    display: inline; /* Ensure logos are always displayed */
+    display: inline;
 }
 
 .nav-bar {
@@ -35,7 +35,6 @@ header {
     font-size: 16px;
 }
 
-/* Navigation links */
 .nav-bar a {
     color: white;
     text-decoration: none;
@@ -54,22 +53,12 @@ header {
     cursor: pointer;
 }
 
-/* Centered page title for small screens */
-.page-title {
-    display: none;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-}
-
 /* Mobile Styles */
 @media (max-width: 768px) {
     /* Adjust logo size for smaller screens */
     .header-left img, .header-right img {
-        width: 70px; /* Smaller logo size for mobile */
+        width: 70px;
         height: auto;
-        display: inline-block; /* Ensure logos display on mobile */
-        vertical-align: middle; /* Keep logos vertically aligned */
     }
 
     /* Show hamburger and hide navigation links */
@@ -87,110 +76,12 @@ header {
     .nav-bar.show {
         display: flex;
     }
-
-    /* Center logos, page title, and hamburger in one row */
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: nowrap;
-    }
-
-    /* Display page title for small screens */
-    .page-title {
-        display: block;
-        font-size: 18px;
-        text-align: center;
-    }
 }
 
 /* Main content styles */
 main {
     padding: 20px;
     text-align: center;
-}
-
-/* Section styling */
-section {
-    margin: 20px auto;
-    max-width: 900px;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-.intro h1 {
-    font-size: 28px;
-    color: #0065A4;
-}
-
-.intro h3 {
-    font-size: 24px;
-    color: #333;
-}
-
-.intro p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 15px 0;
-}
-
-.mission h2, .benefits h2 {
-    font-size: 24px;
-    color: #0065A4;
-}
-
-.mission p, .benefits ul {
-    font-size: 18px;
-    color: #333;
-    line-height: 1.6;
-}
-
-.mission ul, .benefits ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.mission ul li, .benefits ul li {
-    font-size: 16px;
-    margin: 10px 0;
-}
-
-.mission ul li strong, .benefits ul li strong {
-    color: #0065A4;
-}
-
-/* Center headings */
-h1, h3 {
-    text-align: center;
-}
-
-/* Add spacing to paragraphs */
-p {
-    margin: 20px auto;
-    padding: 0 20px;
-    max-width: 900px;
-    text-align: justify;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-/* Footer Section Styles */
-footer {
-    background-color: #0065A4;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    font-size: 14px;
 }
 
 /* Contact Us Page Styles */
@@ -264,4 +155,19 @@ footer p {
 
 .social-media a:hover {
     color: #0065A4;
+}
+
+/* Footer Section Styles */
+footer {
+    background-color: #0065A4;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 14px;
 }
