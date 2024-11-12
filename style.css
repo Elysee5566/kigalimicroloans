@@ -16,16 +16,13 @@ header {
 }
 
 /* Fix the logo size specifically */
-.header-left img {
-    max-width: 120px; /* Limit the max width of KML logo */
-    height: auto;
+.header-left img, .header-right img {
+    max-width: 120px; /* Limit the max width of both KML and Umurabyo logos */
+    height: 60px; /* Explicit height to control logo size */
+    object-fit: contain; /* Ensure logos maintain their aspect ratio */
 }
 
-.header-right img {
-    max-width: 120px; /* Limit the max width of Umurabyo logo */
-    height: auto;
-}
-
+/* Other header styles */
 .page-title {
     flex: 2;
     text-align: center;
