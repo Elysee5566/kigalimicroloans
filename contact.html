@@ -15,7 +15,7 @@
 
         <!-- Hamburger Icon for small screens -->
         <div class="hamburger" onclick="toggleMenu()">
-            &#9776; <!-- This is the hamburger icon -->
+            &#9776;
         </div>
 
         <!-- Page Title for Small Screens -->
@@ -38,35 +38,30 @@
 
     <!-- Main Content -->
     <main>
-        <section class="contact-container">
-            <h2>Contact Us</h2>
-            <p>Reach out to us through any of the following methods. Our team is here to assist you with any inquiries or support needs.</p>
+        <section class="contact-info">
+            <h1>Contact Information</h1>
+            <p>If you have any questions, feel free to reach out to us through the following channels:</p>
+            
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:kigalimicroloans@gmail.com">kigalimicroloans@gmail.com</a></li>
+                <li><strong>Phone:</strong> <a href="tel:+250781001491">0781001491</a>, <a href="tel:+250784603391">0784603391</a>, <a href="tel:+250798117214">0798117214</a></li>
+                <li><strong>Location:</strong> Nyamirambo, Basil Heights, 2nd floor, P.O. Box 677, Kigali</li>
+            </ul>
+            
+            <h2>Visit Us on Social Media</h2>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/company/kigali-microloans/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://x.com/KigaliM77493/" target="_blank">Twitter</a></li>
+                <li><a href="https://www.instagram.com/kigalimicroloans/" target="_blank">Instagram</a></li>
+            </ul>
+        </section>
 
-            <div class="contact-details">
-                <div class="contact-item">
-                    <h3>Email</h3>
-                    <p><a href="mailto:kigalimicroloans@gmail.com">kigalimicroloans@gmail.com</a></p>
-                </div>
-
-                <div class="contact-item">
-                    <h3>Phone Numbers</h3>
-                    <p><a href="tel:+250781001491">0781001491</a></p>
-                    <p><a href="tel:+250784603391">0784603391</a></p>
-                    <p><a href="tel:+250798117214">0798117214</a></p>
-                </div>
-
-                <div class="contact-item">
-                    <h3>Location</h3>
-                    <p>Nyamirambo, Basil Heights, 2nd floor</p>
-                    <p>P.O. Box 677, Kigali</p>
-                </div>
-            </div>
-
-            <div class="social-media">
-                <h3>Follow Us</h3>
-                <a href="https://www.linkedin.com/company/kigali-microloans/" target="_blank">LinkedIn</a>
-                <a href="https://x.com/KigaliM77493/" target="_blank">Twitter</a>
-                <a href="https://www.instagram.com/kigalimicroloans/" target="_blank">Instagram</a>
+        <section class="map-location">
+            <h2>Find Us on the Map</h2>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=23F2+6QQ+Kigali"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
     </main>
@@ -82,7 +77,6 @@
             navBar.classList.toggle('show');
         }
 
-        // Update the page title dynamically based on the current page
         const currentPage = window.location.pathname.split('/').pop();
         const pageTitle = document.getElementById('page-title');
         
