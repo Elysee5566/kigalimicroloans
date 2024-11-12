@@ -3,153 +3,141 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
 header {
-    background-color: #004e92; /* Your header background color */
-    color: white;
-    padding: 20px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    background-color: #0045c2; /* Adjust this as needed */
+    padding: 10px 20px;
+    position: relative;
 }
 
-/* Fix the logo size specifically */
-.header-left img, .header-right img {
-    max-width: 120px; /* Limit the max width of both KML and Umurabyo logos */
-    height: 60px; /* Explicit height to control logo size */
-    object-fit: contain; /* Ensure logos maintain their aspect ratio */
+.header-left img,
+.header-right img {
+    height: 50px;
 }
 
-/* Other header styles */
 .page-title {
-    flex: 2;
-    text-align: center;
     font-size: 24px;
-    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    flex-grow: 1;
 }
 
 .nav-bar {
     display: flex;
-    justify-content: center;
-    background-color: #003366;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: 10px;
+    gap: 20px;
+    align-items: center;
 }
 
 .nav-bar a {
-    color: white;
-    padding: 10px 20px;
+    font-size: 14px;  /* Adjust font size */
+    color: #fff;
     text-decoration: none;
-    text-align: center;
-    flex: 1;
+    padding: 10px 15px;  /* Adjust padding */
 }
 
 .nav-bar a:hover {
-    background-color: #005cbf;
+    background-color: #333;
 }
 
-/* Mobile Responsive Menu */
+/* Hamburger Menu */
 .hamburger {
     display: none;
+    font-size: 30px;
+    color: #fff;
     cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
-    .hamburger {
-        display: block;
-        font-size: 30px;
-        color: white;
-    }
+.show {
+    display: block;
+}
 
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+.contact-info h1,
+.contact-info p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.contact-details {
+    margin-bottom: 20px;
+}
+
+.detail {
+    margin-bottom: 10px;
+}
+
+.contact-details a {
+    color: #0045c2;
+    text-decoration: none;
+}
+
+.social-media h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Location Map */
+.location-map {
+    margin-top: 30px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Small Screen Adjustments */
+@media (max-width: 768px) {
     .nav-bar {
         display: none;
-        width: 100%;
         flex-direction: column;
+        gap: 10px;
+        width: 100%;
     }
 
     .nav-bar.show {
         display: flex;
     }
 
+    .hamburger {
+        display: block;
+    }
+
     .nav-bar a {
-        width: 100%;
-        text-align: left;
+        font-size: 12px;  /* Adjust font size further for small screens */
     }
-}
 
-/* Main Content */
-main {
-    padding: 20px;
-    background-color: white;
-}
-
-.contact-info h1, .social-media h2, .location-map h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.contact-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.detail {
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-}
-
-.social-icons a {
-    display: inline-block;
-    margin: 10px;
-}
-
-.social-icons img {
-    width: 40px;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.social-icons img:hover {
-    transform: scale(1.1);
-}
-
-.location-map iframe {
-    width: 100%;
-    height: 400px;
-    border: none;
-}
-
-/* Footer */
-footer {
-    background-color: #003366;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-/* Mobile Responsive Adjustments for Contact Info */
-@media screen and (max-width: 768px) {
     .contact-details p {
-        text-align: center;
-        font-size: 16px;
-    }
-
-    .contact-details .detail p {
-        margin-top: 5px;
-    }
-
-    .contact-details .detail {
         margin-bottom: 10px;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+    }
+
+    footer {
+        font-size: 14px;
     }
 }
