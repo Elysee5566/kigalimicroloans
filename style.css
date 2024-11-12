@@ -102,6 +102,12 @@ header {
         font-size: 18px;
         text-align: center;
     }
+
+    /* Contact details phone numbers displayed vertically on small screens */
+    .contact-details .detail p {
+        display: block;
+        margin: 5px 0;
+    }
 }
 
 /* Main content styles */
