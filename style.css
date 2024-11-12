@@ -1,4 +1,4 @@
-/* Reset some default styles for consistent layout */
+/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
@@ -53,6 +53,7 @@ header {
     cursor: pointer;
 }
 
+/* Centered page title for small screens */
 .page-title {
     display: none;
     color: white;
@@ -65,6 +66,7 @@ header {
     /* Adjust logo size for smaller screens */
     .header-left img, .header-right img {
         width: 70px; /* Smaller logo size for mobile */
+        display: inline; /* Ensure logos display on mobile */
     }
 
     /* Show hamburger and hide navigation links */
@@ -83,14 +85,14 @@ header {
         display: flex;
     }
 
-    /* Center logos and hamburger in one row */
+    /* Center logos, page title, and hamburger in one row */
     header {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    /* Page title for small screens */
+    /* Display page title for small screens */
     .page-title {
         display: block;
         font-size: 18px;
