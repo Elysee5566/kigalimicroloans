@@ -11,35 +11,34 @@ body {
     color: #333;
 }
 
+/* Header styles */
 header {
     background-color: #0065A4; /* Primary brand color */
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 10px 20px;
 }
 
-.header-left, .header-right {
-    display: flex;
-    align-items: center;
-}
-
+/* Left logo, title, and right logo */
 .header-left img, .header-right img {
-    width: 120px; /* Adjust size as necessary */
+    width: 100px; /* Default logo size on desktop */
+    height: auto;
 }
 
 .nav-bar {
     display: flex;
     justify-content: space-around;
-    width: 40%;
+    width: 50%; /* Adjust width of navigation links */
     font-size: 16px;
 }
 
+/* Navigation links */
 .nav-bar a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px 15px;
 }
 
 .nav-bar a:hover {
@@ -47,6 +46,7 @@ header {
     border-radius: 5px;
 }
 
+/* Hamburger menu icon for mobile */
 .hamburger {
     display: none;
     font-size: 30px;
@@ -60,8 +60,18 @@ header {
     text-align: center;
 }
 
-/* Mobile styles */
+/* Mobile Styles */
 @media (max-width: 768px) {
+    /* Adjust logo size for smaller screens */
+    .header-left img, .header-right img {
+        width: 70px; /* Smaller logo size for mobile */
+    }
+
+    /* Show hamburger and hide navigation links */
+    .hamburger {
+        display: block;
+    }
+
     .nav-bar {
         display: none;
         flex-direction: column;
@@ -69,20 +79,22 @@ header {
         width: 100%;
     }
 
-    .hamburger {
-        display: block;
-    }
-
     .nav-bar.show {
         display: flex;
     }
 
-    .header-left, .header-right {
-        display: none;
+    /* Center logos and hamburger in one row */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
+    /* Page title for small screens */
     .page-title {
         display: block;
+        font-size: 18px;
+        text-align: center;
     }
 }
 
@@ -92,6 +104,7 @@ main {
     text-align: center;
 }
 
+/* Section styling */
 section {
     margin: 20px auto;
     max-width: 900px;
@@ -101,7 +114,6 @@ section {
     border-radius: 8px;
 }
 
-/* About Us Specific Styles */
 .intro h1 {
     font-size: 28px;
     color: #0065A4;
@@ -160,7 +172,7 @@ ul {
     padding-left: 20px;
 }
 
-/* Footer Section Styles (if you have one later) */
+/* Footer Section Styles */
 footer {
     background-color: #0065A4;
     color: white;
@@ -174,5 +186,3 @@ footer {
 footer p {
     font-size: 14px;
 }
-
-/* Add any other global styles for the website here */
