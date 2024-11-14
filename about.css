@@ -81,7 +81,7 @@ header {
 main {
     padding: 20px;
 }
-.about-section, .eligibility-section, .application-procedures, .loan-recovery, .interest-rate {
+.about-section, .vision-mission-values, .eligibility-section, .application-procedures, .loan-recovery, .interest-rate {
     background-color: #fff;
     padding: 20px;
     margin: 20px 0;
@@ -94,6 +94,14 @@ h1, h2 {
 }
 p {
     margin-bottom: 10px;
+}
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+ul li {
+    margin-bottom: 5px;
 }
 ol {
     padding-left: 20px;
