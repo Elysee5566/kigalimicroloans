@@ -1,119 +1,138 @@
-/* Basic Reset */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Navigation Bar */
+body {
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+/* Navigation */
 nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: #004080;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #001f3f;
 }
-nav .logo {
-    height: 50px;
-}
+
 nav ul {
     display: flex;
-    gap: 1.5rem;
+    list-style: none;
 }
+
+nav li {
+    margin: 0 15px;
+}
+
 nav a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
+}
+
+.logo {
+    width: 120px;
 }
 
 /* Hero Section */
 .hero {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 80vh;
-    background: url('background-animation.mp4') no-repeat center center;
+    justify-content: center;
+    height: 90vh;
+    background: url('background-animation.gif') no-repeat center center;
     background-size: cover;
     color: #fff;
     text-align: center;
     position: relative;
 }
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
+
 .hero-content {
+    position: relative;
     z-index: 1;
-}
-.hero h1 {
-    font-size: 3rem;
-    animation: slideIn 2s ease;
-}
-.hero p {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-    animation: fadeIn 2s ease;
-}
-.cta-button {
-    padding: 1rem 2rem;
-    color: #004080;
-    background: #fff;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    animation: bounce 2s infinite;
+    animation: fadeIn 3s ease-out;
 }
 
-/* Key Animations */
-@keyframes slideIn {
-    0% { transform: translateY(-100px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+.umurabyo-logo {
+    width: 150px;
+    margin-bottom: 20px;
+    animation: slideIn 2s ease-out;
 }
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation: fadeInUp 2s ease-out 0.5s;
 }
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    animation: fadeInUp 2s ease-out 0.75s;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #ff6700;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    animation: fadeInUp 2s ease-out 1s;
 }
 
 /* Umurabyo Loan Section */
 .umurabyo-loan {
-    padding: 2rem;
-    background: #f0f8ff;
+    padding: 50px 20px;
     text-align: center;
+    background-color: #ffffff;
 }
+
 .umurabyo-loan h2 {
-    font-size: 2rem;
-    color: #004080;
-    margin-bottom: 1rem;
+    font-size: 2.5em;
+    color: #001f3f;
+    margin-bottom: 20px;
 }
+
 .umurabyo-loan p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
 }
+
 .umurabyo-loan ul {
-    list-style-type: none;
-    font-size: 1.1rem;
+    list-style: none;
+    color: #333;
 }
+
 .umurabyo-loan li {
-    margin: 0.5rem 0;
+    margin: 10px 0;
+    font-size: 1.1em;
 }
 
 /* Footer */
 footer {
-    background-color: #004080;
+    padding: 20px;
+    background-color: #001f3f;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
 }
-footer a {
-    color: #ffd700;
-    text-decoration: none;
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
