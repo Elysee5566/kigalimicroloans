@@ -57,10 +57,11 @@ nav a {
     animation: fadeIn 3s ease-out;
 }
 
+/* Umurabyo Branding Logo Animation */
 .umurabyo-logo {
     width: 150px;
     margin-bottom: 20px;
-    animation: slideIn 2s ease-out;
+    animation: slideInLogo 2.5s ease-out;
 }
 
 .hero h1 {
@@ -127,9 +128,9 @@ footer {
     to { opacity: 1; }
 }
 
-@keyframes slideIn {
-    from { transform: translateX(-100px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
+@keyframes slideInLogo {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes fadeInUp {
