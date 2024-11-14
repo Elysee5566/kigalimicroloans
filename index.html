@@ -3,78 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kigali MicroLoans - Your Trusted Neighbourhood Lender</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="Logos/KML Logo.png" type="image/png">
+    <title>Kigali Microloans Ltd</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="header-left">
-            <img src="Logos/KML Logo.png" alt="KML Logo" class="logo-left">
-        </div>
-
-        <!-- Hamburger Icon for small screens -->
-        <div class="hamburger" onclick="toggleMenu()">
-            &#9776; <!-- This is the hamburger icon -->
-        </div>
-
-        <!-- Page Title for Small Screens -->
-        <div class="page-title" id="page-title">
-            Home <!-- Default title, will be updated dynamically -->
-        </div>
-
-        <!-- Navigation Bar -->
-        <nav class="nav-bar">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="apply.html">Apply for a Loan</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
-
-        <div class="header-right">
-            <img src="Logos/Umurabyo brand.png" alt="Umurabyo Logo" class="logo-right">
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <img src="kml-logo.png" alt="Kigali Microloans Logo" class="logo">
+            <h1 class="hero-title">Empowering Financial Growth</h1>
+            <p class="hero-text">Securing cheaper and faster loans with Kigali Microloans.</p>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <section class="intro">
-            <h1>Welcome to Kigali MicroLoans</h1>
-            
-            <h3>Your Trusted Neighbourhood Lender</h3>
-            
-            <p>At Kigali MicroLoans, we understand that life can bring unexpected challenges, and sometimes, you need immediate financial support. We are here to help individuals in Rwanda access fast, hassle-free personal loans to solve urgent problems. Whether you need money for medical emergencies, school fees, or other urgent needs, we're here to provide quick assistance.</p>
-        </section>
+    <!-- Vision, Mission, Values Section -->
+    <section class="about">
+        <div class="content-wrapper">
+            <h2>Our Mission</h2>
+            <p>To assist our clients in securing cheaper and faster loans through modern digital tools and technologies.</p>
+            <h2>Our Vision</h2>
+            <p>To become the best national lending institution through providing innovative agile financial solutions.</p>
+            <h2>Our Values</h2>
+            <p>Customer-oriented, innovation, timeliness, and agility.</p>
+        </div>
+    </section>
 
-        <!-- Image Carousel Section -->
-        <section class="image-carousel">
-            <img src="Fliers/Flier1.png" alt="Flier 1" style="max-width: 100%; height: auto;">
-        </section>
-    </main>
+    <!-- Products Section -->
+    <section class="products">
+        <h2>Our Loan Products</h2>
+        <div class="product">
+            <h3>Umurabyo Loan</h3>
+            <p>A short-term cash loan repaid monthly for emergency needs.</p>
+        </div>
+        <div class="product">
+            <h3>Nkunganire Group Loan</h3>
+            <p>A group loan for small women traders, repaid in two months.</p>
+        </div>
+    </section>
+
     <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Kigali MicroLoans. All Rights Reserved.</p>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Contact Us: kigalimicroloans@gmail.com | +250 781001491</p>
+            <p>Follow us on <a href="https://www.linkedin.com/company/kigali-microloans/">LinkedIn</a>, <a href="https://x.com/KigaliM77493/">X</a>, <a href="https://www.instagram.com/kigalimicroloans/">Instagram</a></p>
+        </div>
     </footer>
-    <script>
-        function toggleMenu() {
-            const navBar = document.querySelector('.nav-bar');
-            navBar.classList.toggle('show');
-        }
-
-        // Update the page title dynamically based on the current page
-        const currentPage = window.location.pathname.split('/').pop();
-        const pageTitle = document.getElementById('page-title');
-        
-        if (currentPage === 'index.html') {
-            pageTitle.textContent = 'Home';
-        } else if (currentPage === 'about.html') {
-            pageTitle.textContent = 'About Us';
-        } else if (currentPage === 'apply.html') {
-            pageTitle.textContent = 'Apply for a Loan';
-        } else if (currentPage === 'contact.html') {
-            pageTitle.textContent = 'Contact Us';
-        }
-    </script>
 </body>
 </html>
