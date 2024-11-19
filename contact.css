@@ -7,55 +7,70 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Header Styles */
+/* Header Section */
 header {
-    background-color: #004b87;
-    color: white;
-    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    background-color: #0056b3;
+    color: #fff;
+    padding: 15px;
 }
-
 .header-left, .header-right {
+    flex: 1;
     display: flex;
     align-items: center;
 }
-
 .logo-left, .logo-right {
     height: 50px;
 }
-
-.hamburger {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
 .page-title {
-    font-size: 24px;
+    font-size: 1.8em;
     font-weight: bold;
-    text-align: center;
-    flex-grow: 1;
 }
-
+.hamburger {
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none;
+}
 .nav-bar {
+    flex: 2;
     display: flex;
-    justify-content: space-around;
-    flex-grow: 1;
+    justify-content: center;
 }
-
 .nav-bar a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    padding: 10px;
-    font-size: 18px;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+}
+.nav-bar a:hover {
+    background-color: #003a73;
+    border-radius: 5px;
 }
 
-.nav-bar a:hover {
-    background-color: #003366;
-    border-radius: 5px;
+/* Responsive Menu */
+.nav-bar.show {
+    display: flex;
+}
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        background-color: #0056b3;
+        border-radius: 5px;
+        width: 200px;
+    }
+    .nav-bar a {
+        padding: 10px;
+        text-align: center;
+    }
 }
 
 /* Contact Section */
