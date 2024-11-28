@@ -45,10 +45,10 @@
 /* Umurabyo Loan Product Section */
 .custom-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 20px;
+    padding: 40px;
 }
 
 .product-title {
@@ -58,15 +58,21 @@
     margin-bottom: 20px;
 }
 
-.custom-container .text {
-    flex: 1;
-    padding-left: 20px;
+.product-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
 }
 
-.custom-container .image img {
-    max-width: 50%;
+.product-content .text {
+    max-width: 500px;
+    text-align: left;
+}
+
+.product-content .image img {
+    max-width: 250px;
     height: auto;
-    flex-shrink: 0;
 }
 
 /* FAQ Section */
@@ -118,18 +124,18 @@
 
 /* Styling for responsiveness */
 @media (max-width: 768px) {
-    .custom-container {
+    .product-content {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    .custom-container .image img {
+    .product-content .image img {
         max-width: 80%;
         margin-bottom: 20px;
     }
 
-    .custom-container .text {
+    .product-content .text {
         padding-left: 0;
     }
 }
