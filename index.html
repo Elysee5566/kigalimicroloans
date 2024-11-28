@@ -3,44 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Umurabyo Loan</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Kigali Microloans - Umurabyo Loan</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
-    <!-- Hero Section with Background Video and Title -->
-    <section class="hero">
+
+    <!-- Navigation -->
+    <nav>
+        <img src="Logos/KML Logo.png" alt="Kigali Microloans Logo" class="logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="apply.html">Apply for Loan</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Background Animation -->
+    <header class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Welcome to Umurabyo Loan</h1>
-            <p class="hero-subtitle">Fast and Easy Loan Solutions</p>
+            <!-- Added Umurabyo Branding Logo -->
+            <img src="Logos/Umurabyo brand.png" alt="Umurabyo Loan Branding" class="umurabyo-logo">
+            <h1>Kigali Microloans</h1>
+            <p>Your Trusted Neighborhood Lender</p>
+            <a href="apply.html" class="cta-button">Apply Now</a>
+        </div>
+    </header>
+
+    <!-- Embedded Video Section -->
+    <section class="video-section">
+        <div class="video-container">
+            <h2>Learn More About Kigali Microloans</h2>
+            <video controls>
+                <source src="Media/Kml Profile Video R.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </section>
 
-    <!-- Umurabyo Loan Product Section -->
-    <div class="custom-container">
-        <h2 class="product-title">Our Product</h2>
-
-        <div class="product-content">
+    <!-- Product Section -->
+    <section class="product-section">
+        <h2 class="section-title">Our Product</h2>
+        <div class="custom-container">
             <div class="image">
                 <img src="Logos/Umurabyo brand.png" alt="Umurabyo Loan Service">
             </div>
-
             <div class="text">
-                <h3>Umurabyo Loan</h3>
+                <h2>Umurabyo Loan</h2>
                 <p>Our Umurabyo Loan is a short-term cash solution to help you manage emergencies and get through to the next paycheck. Designed for formal employees, we prioritize speed, convenience, and support.</p>
-                <p><strong>Quick Approval Process</strong></p>
-                <p><strong>Access Up to 500,000 Frw</strong></p>
-                <p><strong>No Hidden Fees, only small Monthly Interest</strong></p>
+                <ul>
+                    <li>Quick Approval Process</li>
+                    <li>Access Up to 500,000 Frw</li>
+                    <li>No Hidden Fees, only small Monthly Interest</li>
+                </ul>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- FAQ Section -->
     <section id="qa-section">
-        <h2 class="qa-title">Frequently Asked Questions (FAQs)</h2>
+        <h2 class="section-title">Frequently Asked Questions (FAQs)</h2>
         <div class="qa-container">
             <div class="qa-item">
                 <div class="question">
-                    What is the Umurabyo Loan?
+                    What is the Umurabyo Loan? 
                     <span class="caret">↓</span>
                 </div>
                 <div class="answer">
@@ -49,50 +76,35 @@
             </div>
             <div class="qa-item">
                 <div class="question">
-                    How long does the approval process take?
+                    How much can I borrow from Kigali Microloans? 
                     <span class="caret">↓</span>
                 </div>
                 <div class="answer">
-                    The approval process is quick and efficient. Once your application is submitted, we aim to provide a decision within 24 hours.
+                    You can borrow up to 500,000 Rwandan Francs (Frw) for Umurabyo Loan.
                 </div>
             </div>
-            <div class="qa-item">
-                <div class="question">
-                    How much can I borrow with the Umurabyo Loan?
-                    <span class="caret">↓</span>
-                </div>
-                <div class="answer">
-                    You can borrow up to 500,000 Frw depending on your eligibility and repayment capacity.
-                </div>
-            </div>
-            <div class="qa-item">
-                <div class="question">
-                    Are there any hidden fees?
-                    <span class="caret">↓</span>
-                </div>
-                <div class="answer">
-                    No, there are no hidden fees. We only charge a small monthly interest on the loan amount.
-                </div>
-            </div>
-            <div class="qa-item">
-                <div class="question">
-                    How do I repay the loan?
-                    <span class="caret">↓</span>
-                </div>
-                <div class="answer">
-                    Repayment is simple. You can repay the loan in monthly installments through various payment methods. We will send you reminders before your due date.
-                </div>
-            </div>
-            <div class="qa-item">
-                <div class="question">
-                    Can I reloan after paying back my loan?
-                    <span class="caret">↓</span>
-                </div>
-                <div class="answer">
-                    Yes! Once you have paid off your loan, you are eligible to apply for another loan under the same terms.
-                </div>
-            </div>
+            <!-- Add more Q&A items here -->
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Kigali Microloans Ltd. | All Rights Reserved</p>
+        <p>Follow Us on <a href="https://www.linkedin.com/company/kigali-microloans/">LinkedIn</a> | <a href="https://x.com/KigaliM77493/">X</a> | <a href="https://www.instagram.com/kigalimicroloans/">Instagram</a></p>
+    </footer>
+
+    <script>
+        // Q&A Section Toggle Functionality
+        const questions = document.querySelectorAll('#qa-section .question');
+        questions.forEach((question) => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+                const caret = question.querySelector('.caret');
+                caret.classList.toggle('caret-down');
+            });
+        });
+    </script>
+
 </body>
 </html>
