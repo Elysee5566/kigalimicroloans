@@ -1,32 +1,11 @@
-/* Basic Reset */
+/* General reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Navigation Bar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #004080;
-}
-nav .logo {
-    height: 50px;
-}
-nav ul {
-    display: flex;
-    gap: 1.5rem;
-}
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Hero Section */
+/* Hero Section with Background Video and Title */
 .hero {
     display: flex;
     justify-content: center;
@@ -39,102 +18,118 @@ nav a {
     position: relative;
 }
 
-.hero .hero-content {
-    z-index: 2;
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.hero h1 {
+.hero-content {
+    z-index: 1;
+}
+
+.hero-title {
     font-size: 3rem;
-}
-
-.hero p {
-    font-size: 1.5rem;
-}
-
-.cta-button {
-    background-color: #008CBA;
-    color: #fff;
-    padding: 1rem 2rem;
-    text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;
 }
 
-.cta-button:hover {
-    background-color: #005f6b;
-}
-
-/* Video Section */
-.video-section {
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-    background-color: #f8f8f8;
-}
-
-.video-container {
-    text-align: center;
-    max-width: 800px;
-}
-
-.video-title {
+.hero-subtitle {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
+    margin-top: 10px;
+}
+
+/* Umurabyo Loan Product Section */
+.custom-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.custom-container .text {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.custom-container .image img {
+    max-width: 50%;
+    height: auto;
+    flex-shrink: 0;
 }
 
 /* FAQ Section */
-.faq-title {
+.qa-title {
     text-align: center;
     font-size: 2rem;
-    margin: 2rem 0;
+    color: #004080;
+    margin-top: 40px;
 }
 
 .qa-container {
-    width: 80%;
-    margin: 2rem auto;
+    margin: 20px;
 }
 
 .qa-item {
-    background-color: #f8f8f8;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .question {
-    font-size: 1.2rem;
+    background-color: #f1f1f1;
+    padding: 15px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    text-align: left;
     font-weight: bold;
-    position: relative;
+    font-size: 18px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.answer {
+    padding: 15px;
+    display: none;
+    border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
 }
 
 .caret {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+    font-size: 18px;
+    transition: transform 0.3s ease;
 }
 
 .caret-down {
     transform: rotate(180deg);
 }
 
-.answer {
-    display: none;
-    padding-top: 0.5rem;
-    font-size: 1rem;
-    color: #333;
-}
+/* Styling for responsiveness */
+@media (max-width: 768px) {
+    .custom-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #004080;
-    color: #fff;
-}
+    .custom-container .image img {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
+    .custom-container .text {
+        padding-left: 0;
+    }
 }
