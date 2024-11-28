@@ -146,18 +146,20 @@ footer a {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
   .custom-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Ensures elements are placed in a row */
+    justify-content: space-between; /* Adds space between the text and image */
+    align-items: center; /* Vertically aligns the items */
+    gap: 20px; /* Optional: adds spacing between text and image */
     padding: 20px;
   }
+
   .custom-container .text {
-    width: 45%; /* Adjust as needed */
-  }
-  .custom-container .image img {
-    max-width: 45%; /* Adjust as needed */
-    height: auto;
+    flex: 1; /* Ensures the text takes up available space */
   }
 
+  .custom-container .image img {
+    max-width: 100%; /* Ensures the image scales properly */
+    height: auto; /* Maintains the aspect ratio */
+    flex-shrink: 0; /* Prevents the image from shrinking */
+  }
