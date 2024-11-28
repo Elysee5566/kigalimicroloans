@@ -145,3 +145,19 @@ footer a {
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+<style>
+  .custom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  .custom-container .text {
+    width: 45%; /* Adjust as needed */
+  }
+  .custom-container .image img {
+    max-width: 45%; /* Adjust as needed */
+    height: auto;
+  }
+</style>
