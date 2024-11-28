@@ -163,3 +163,19 @@ footer a {
     height: auto; /* Maintains the aspect ratio */
     flex-shrink: 0; /* Prevents the image from shrinking */
   }
+
+
+    /* Style for Q&A */
+    .qa-container {
+      font-family: "Times New Roman", Times, serif; /* Set the font for both question and answer */
+      margin: 20px;
+    }
+
+    .question {
+      font-weight: bold; /* Make the question bold */
+    }
+
+    .answer {
+      font-weight: normal; /* Ensure the answer is in regular font */
+      margin-top: 5px; /* Space between question and answer */
+    }
