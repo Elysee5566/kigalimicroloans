@@ -165,17 +165,49 @@ footer a {
   }
 
 
-    /* Style for Q&A */
+
+    /* General Styling for Q&A Only */
+    #qa-section {
+      font-family: "Times New Roman", Times, serif;
+      padding: 20px;
+    }
+
     .qa-container {
-      font-family: "Times New Roman", Times, serif; /* Set the font for both question and answer */
       margin: 20px;
     }
 
+    .qa-item {
+      margin-bottom: 10px; /* Spacing between items */
+    }
+
     .question {
-      font-weight: bold; /* Make the question bold */
+      background-color: #f1f1f1;
+      padding: 15px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+      text-align: left;
+      font-weight: bold;
+      font-size: 18px;
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .answer {
-      font-weight: normal; /* Ensure the answer is in regular font */
-      margin-top: 5px; /* Space between question and answer */
+      padding: 15px;
+      display: none; /* Initially hidden */
+      border-top: 1px solid #ddd;
+      background-color: #f9f9f9;
     }
+
+    .caret {
+      font-size: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    .caret-down {
+      transform: rotate(180deg); /* Rotate caret when clicked */
+    }
+
