@@ -1,76 +1,101 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* Basic Reset */
+* {
+    margin: 2;
+    padding: 2;
     box-sizing: border-box;
-    background-color: #f4f4f4;
 }
 
-/* Header Section */
-header {
+/* Navigation Bar */
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0056b3;
-    color: #fff;
-    padding: 15px;
-}
-.header-left, .header-right {
-    flex: 1;
-    display: flex;
-    align-items: center;
-}
-.logo-left, .logo-right {
+    padding: 1rem 2rem;
+    background-color: #004080;
+} 
+nav .logo {
     height: 50px;
 }
-.page-title {
-    font-size: 1.8em;
-    font-weight: bold;
-}
-.hamburger {
-    font-size: 1.5em;
-    cursor: pointer;
-    display: none;
-}
-.nav-bar {
-    flex: 2;
+nav ul {
     display: flex;
-    justify-content: center;
+    gap: 1.5rem;
 }
-.nav-bar a {
+nav a {
     color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
-    transition: background 0.3s ease;
-}
-.nav-bar a:hover {
-    background-color: #003a73;
-    border-radius: 5px;
+    font-weight: bold;
 }
 
-/* Responsive Menu */
-.nav-bar.show {
+/* Hero Section */
+.hero {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background: url('background-animation.mp4') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    position: relative;
 }
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-    .nav-bar {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 15px;
-        background-color: #0056b3;
-        border-radius: 5px;
-        width: 200px;
-    }
-    .nav-bar a {
-        padding: 10px;
-        text-align: center;
-    }
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.hero-content {
+    z-index: 1;
+}
+
+/* Umurabyo Branding Logo */
+.umurabyo-logo {
+    width: 120px;
+    margin-bottom: 20px;
+    animation: fadeIn 3s ease;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    animation: slideIn 2s ease;
+}
+.hero p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    animation: fadeIn 2s ease;
+}
+.cta-button {
+    padding: 1rem 2rem;
+    color: #004080;
+    background: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+}
+
+/* Key Animations */
+@keyframes slideIn {
+    0% { transform: translateY(-100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Umurabyo Loan Section */
+.product-section {
+    padding: 2rem;
+    background: #f0f8ff;
+    text-align: center;
 }
 
 /* Contact Section */
@@ -153,39 +178,138 @@ main {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
-footer {
-    background-color: #004b87;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+/* Q&A Section */
+#qa-section {
+    padding: 2rem;
+}
+.qa-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.qa-item {
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.qa-item .question {
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.qa-item .question strong {
+    font-weight: bold;
+}
+.qa-item .answer {
+    font-size: 1rem;
+    display: none;
+    margin-top: 0.5rem;
 }
 
-/* Responsive Styles */
+/* Adjustments for smaller screens */
 @media (max-width: 768px) {
-    .nav-bar {
-        display: none;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .nav-bar.show {
-        display: flex;
+    nav ul {
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #004b87;
-        padding: 20px;
-        border-radius: 8px;
+        gap: 1rem;
     }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+    .custom-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
-    .nav-bar a {
-        padding: 15px;
+/* Footer */
+footer {
+    background-color: #004080;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+/* Center the section titles */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #004080;
+    margin: 2rem 0;
+}
+
+/* Style the content sections with padding and spacing */
+.content-section {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 0 0 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Enhance readability of the content */
+.content-section p, .content-section ul {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.content-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Add hover effect for the links in the content */
+.content-section a {
+    color: #004080;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.content-section a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for lists to make them look clean */
+.content-section li {
+    margin-bottom: 10px;
+}
+
+/* Hero Section Adjustments */
+.hero-content h1 {
+    font-size: 3rem;
+    animation: fadeIn 2s ease;
+}
+
+/* Main Section Styling for Balance */
+main {
+    padding: 30px;
+}
+
+/* Smooth animation for the hero content */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+    .content-section {
+        padding: 1rem;
     }
 }
