@@ -1,7 +1,7 @@
 /* Basic Reset */
 * {
-    margin: 2;
-    padding: 2;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -91,7 +91,7 @@ nav a {
     50% { transform: translateY(-10px); }
 }
 
-/* Umurabyo Loan Section */
+/* Product Section */
 .product-section {
     padding: 2rem;
     background: #f0f8ff;
@@ -210,4 +210,3 @@ footer a {
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-
