@@ -1,212 +1,143 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!-- Navigation -->
+<nav>
+    <img src="Logos/KML Logo.png" alt="Kigali Microloans Logo" class="logo">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="apply.html">Apply for Loan</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
 
-/* Navigation Bar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #004080;
-} 
-nav .logo {
-    height: 50px;
-}
-nav ul {
-    display: flex;
-    gap: 1.5rem;
-}
-nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
+<!-- Hero Section with Background Animation -->
+<header class="hero">
+    <div class="hero-content">
+        <!-- Added Umurabyo Branding Logo -->
+        <h1>Home</h1>
+        <img src="Logos/Umurabyo brand.png" alt="Umurabyo Loan Branding" class="umurabyo-logo">
+        <h1>Kigali Microloans</h1>
+        <p>Your Trusted Neighborhood Lender</p>
+        <a href="apply.html" class="cta-button">Apply Now</a>
+    </div>
+</header>
 
-/* Hero Section */
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    background: url('background-animation.mp4') no-repeat center center;
-    background-size: cover;
-    color: #fff;
-    text-align: center;
-    position: relative;
-}
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
-.hero-content {
-    z-index: 1;
-}
+<!-- Embedded Video Section -->
+<section class="video-section">
+    <div class="video-container">
+        <h2>Learn More About Kigali Microloans</h2>
+        <video controls>
+            <source src="Media/Kml Profile Video R.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
 
-/* Umurabyo Branding Logo */
-.umurabyo-logo {
-    width: 120px;
-    margin-bottom: 20px;
-    animation: fadeIn 3s ease;
-}
+<!-- Product Section -->
+<section class="product-section">
+    <h2 class="section-title">Our Product</h2>
+    <div class="custom-container">
+        <div class="image">
+            <img src="Logos/Umurabyo brand.png" alt="Umurabyo Loan Service">
+        </div>
+        <div class="text">
+            <h2>Umurabyo Loan</h2>
+            <p>Our Umurabyo Loan is a short-term cash solution to help you manage emergencies and get through to the next paycheck. Designed for formal employees, we prioritize speed, convenience, and support.</p>
+            <p>Quick Approval Process</p>
+            <p>Access Up to 500,000 Frw</p>
+            <p>No Hidden Fees, only small Monthly Interest</p>
+        </div>
+    </div>
+</section>
 
-.hero h1 {
-    font-size: 3rem;
-    animation: slideIn 2s ease;
-}
-.hero p {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-    animation: fadeIn 2s ease;
-}
-.cta-button {
-    padding: 1rem 2rem;
-    color: #004080;
-    background: #fff;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    animation: bounce 2s infinite;
-}
+<!-- FAQ Section -->
+<section id="qa-section">
+    <h2 class="section-title">Frequently Asked Questions (FAQs)</h2>
+    <div class="qa-container">
+        <div class="qa-item">
+            <div class="question">
+                <strong>What is the Umurabyo Loan?</strong> 
+                <span class="caret">↓</span>
+            </div>
+            <div class="answer">
+                The Umurabyo Loan is a short-term cash loan that helps clients cover emergencies until their next payday. It is repaid within one month.
+            </div>
+        </div>
+        <div class="qa-item">
+            <div class="question">
+                <strong>How much can I borrow from Kigali Microloans?</strong> 
+                <span class="caret">↓</span>
+            </div>
+            <div class="answer">
+                You can borrow up to 500,000 Rwandan Francs (Frw) for Umurabyo Loan.
+            </div>
+        </div>
+        <div class="qa-item">
+            <div class="question">
+                <strong>What are the qualifications to apply for the Umurabyo Loan?</strong>
+                <span class="caret">↓</span>
+            </div>
+            <div class="answer">
+                You must be employed in the public or private sector and provide the required documents: National ID, Employment contract, and three months' bank statements.
+            </div>
+        </div>
+        <div class="qa-item">
+            <div class="question">
+                <strong>What is the interest rate for the Umurabyo Loan?</strong>
+                <span class="caret">↓</span>
+            </div>
+            <div class="answer">
+                The interest rate is 10% monthly, with no additional fees for application, processing, administration, insurance, or other costs.
+            </div>
+        </div>
+        <div class="qa-item">
+            <div class="question">
+                <strong>How do I apply for the Umurabyo Loan?</strong>
+                <span class="caret">↓</span>
+            </div>
+            <div class="answer">
+                You can send your application via company email (kigalimicroloans@gmail.com) containing the required documents (National ID, Employment contract, and bank statements), or click <a href="apply.html">here</a> to apply and wait for approval.
+            </div>
+        </div>
+        <div class="qa-item">
+            <div class="question">
+                <strong>Can I reloan after repaying my Umurabyo Loan?</strong>
+                <span class="caret">↓</span>
+            </div>
+            <div class="answer">
+                Yes, clients can reloan up to 2 times. The client must notify Kigali Microloans 10 days before the loan repayment due date.
+            </div>
+        </div>
 
-/* Key Animations */
-@keyframes slideIn {
-    0% { transform: translateY(-100px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
-}
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
+         <div class="qa-item">
+            <div class="question">
+                <strong>How can I repay my Umurabyo Loan?</strong>
+                <span class="caret">↓</span>
+            </div>
+            <div class="answer">
+                 You can repay the loan through cash, mobile money, or a bank deposit.
+            </div>
+        </div>
 
-/* Product Section */
-.product-section {
-    padding: 2rem;
-    background: #f0f8ff;
-    text-align: center;
-}
-.product-section .section-title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
+        <div class="qa-item">
+            <div class="question">
+                <strong>How long does it take to process the loan?</strong>
+                <span class="caret">↓</span>
+            </div>
+            <div class="answer">
+                Loan applications are processed within two hours after submission, and clients will receive the loan as quickly as possible, typically through cash, mobile money, or bank deposit not later than 24 hours.
+            </div>
+        </div>
+        
+        <div class="qa-item">
+            <div class="question">
+                <strong> How can I contact Kigali Microloans if I have further questions?</strong>
+                <span class="caret">↓</span>
+            </div>
+            <div class="answer">
+                 You can reach us by calling directly the numbers provided on <a href="contact.html">Contact Us</a> or through our official email. Contact details are available on the website.
+            </div>
+        </div>
+    </div>
+</section>
 
-.custom-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    align-items: center;
-}
-
-.custom-container .image img {
-    max-width: 100%;
-    height: auto;
-}
-.custom-container .text {
-    text-align: left;
-    flex: 1;
-}
-
-.product-section ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.product-section ul li {
-    margin: 0.5rem 0;
-    font-size: 1.1rem;
-}
-
-/* Q&A Section */
-#qa-section {
-    padding: 2rem;
-}
-.qa-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-.qa-item {
-    background: #fff;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-.qa-item .question {
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.qa-item .question strong {
-    font-weight: bold;
-}
-.qa-item .answer {
-    font-size: 1rem;
-    display: none;
-    margin-top: 0.5rem;
-}
-
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .hero h1 {
-        font-size: 2rem;
-    }
-    .hero p {
-        font-size: 1.2rem;
-    }
-    .custom-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* Footer */
-footer {
-    background-color: #004080;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-}
-footer a {
-    color: #ffd700;
-    text-decoration: none;
-}
-
-/* Video Section */
-.video-section {
-    text-align: center;
-    padding: 2rem;
-    background-color: #f0f8ff;
-}
-
-.video-section h2 {
-    font-size: 2rem;
-    color: #004080;
-    margin-bottom: 1rem;
-}
-
-.video-container video {
-    max-width: 80%;
-    height: auto;
-    border: 3px solid #004080;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
+<!-- Footer -->
