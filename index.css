@@ -273,7 +273,7 @@ footer a {
     }
     .flyer .foimage,
     .flyer .fimage {
-        width: 200%; /* Take full width on smaller screens */
+        width: 150%; /* Take full width on smaller screens */
     }
     .flyer .fcontent {
         width: 100%; /* Adjust text section width */
