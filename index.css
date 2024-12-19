@@ -272,9 +272,6 @@ footer a {
         flex-direction: column; /* Stack content vertically */
         gap: 1rem;
     }
-    .umurabyo-logo{
-        width: 80%; 
-    }
     .flyer .foimage,
     .flyer .fimage {
         width: 100%; /* Take full width on smaller screens */
@@ -315,5 +312,9 @@ footer a {
     .video-container video {
         max-width: 100%; /* Scale video to fit screen */
         height: auto; /* Maintain aspect ratio */
+    }
+    
+    .umurabyo-logo{
+        width: 80%; 
     }
 }
