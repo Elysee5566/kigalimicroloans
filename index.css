@@ -10,38 +10,35 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: lightblue;
-    width: 100%;
-    position: static;
-    border-radius: 20px;
-}
-nav .logo {
-    height: 50px;
+    padding: 20px;
 }
 
-nav h1 {
-    font-family: Arial, sans-serif;
-    color: black;
-    font-size: 30px;
-    background-color: #004080;
-    border-radius: 10px;
-    padding: 0.5rem;
-}
-nav ul {
+.logo-container {
     display: flex;
-    gap: 1.5rem;
-    padding-right: 70px;
+    flex-direction: column;
+    align-items: flex-start;
 }
-nav a {
-    color: #fff;
+
+.logo {
+    width: 150px; /* Logo size */
+}
+
+.home-indicator {
+    margin-top: 10px; /* Space between logo and "Home" indicator */
+    font-size: 24px;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
     text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
+    color: #000;
 }
-nav ul li {
-    list-style: none;
-}
+
 
 nav ul li a:hover {
     color: #ffd700;
