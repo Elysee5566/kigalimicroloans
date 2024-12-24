@@ -1,7 +1,7 @@
 /* Basic Reset */
 * {
-    margin: 2;
-    padding: 2;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -11,19 +11,40 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #004080;
-} 
+    background-color: lightblue;
+    width: 100%;
+    position: static;
+    border-radius: 20px;
+}
 nav .logo {
     height: 50px;
+}
+
+nav h1 {
+    font-family: Arial, sans-serif;
+    color: black;
+    font-size: 40px;
+    background-color: #004080;
+    border-radius: 10px;
+    padding: 0.5rem;
 }
 nav ul {
     display: flex;
     gap: 1.5rem;
+    padding-right: 70px;
 }
 nav a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 20px;
+}
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
 }
 
 /* Hero Section */
@@ -37,6 +58,7 @@ nav a {
     color: #fff;
     text-align: center;
     position: relative;
+    border-radius: 20px;
 }
 .hero::before {
     content: "";
@@ -46,16 +68,10 @@ nav a {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
 }
 .hero-content {
     z-index: 1;
-}
-
-/* Umurabyo Branding Logo */
-.umurabyo-logo {
-    width: 120px;
-    margin-bottom: 20px;
-    animation: fadeIn 3s ease;
 }
 
 .hero h1 {
@@ -77,31 +93,10 @@ nav a {
     animation: bounce 2s infinite;
 }
 
-/* Key Animations */
-@keyframes slideIn {
-    0% { transform: translateY(-100px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
-}
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
-/* Umurabyo Loan Section */
-.product-section {
-    padding: 2rem;
-    background: #f0f8ff;
-    text-align: center;
-}
-
 
 /* Main Content Section */
 main {
-    padding: 40px;
+    padding-top: 20px;
     background-color: white;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     margin: 20px;
@@ -142,55 +137,25 @@ main {
 .qa-container {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 .qa-item {
     background: #fff;
     border-radius: 8px;
-    margin-bottom: 1rem;
     padding: 1rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 .qa-item .question {
     font-size: 1.2rem;
     cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.qa-item .question strong {
-    font-weight: bold;
 }
 .qa-item .answer {
     font-size: 1rem;
     display: none;
     margin-top: 0.5rem;
-}
-
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .hero h1 {
-        font-size: 2rem;
-    }
-    .hero p {
-        font-size: 1.2rem;
-    }
-    .custom-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Adjusting the Apply button for small screens */
-    .btn-apply {
-        width: 100%;
-        padding: 15px 0; /* Making button taller */
-        font-size: 16px; /* Slightly smaller font size for smaller screens */
-        text-align: center;
-    }
+    background-color: lightcyan;
+    padding: 0.5rem;
+    border-radius: 5px;
 }
 
 /* Footer */
@@ -205,76 +170,54 @@ footer a {
     text-decoration: none;
 }
 
-/* Center the section titles */
-.section-title {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #004080;
-    margin: 2rem 0;
-}
 
-/* Style the content sections with padding and spacing */
-.content-section {
-    background-color: #fff;
-    padding: 2rem;
-    margin: 0 0 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: justify;
-    line-height: 1.6;
-}
+/* Add these codes at the end of your existing CSS for responsive design */
 
-/* Enhance readability of the content */
-.content-section p, .content-section ul {
-    font-size: 1.1rem;
-    color: #333;
-}
-
-.content-section ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-/* Add hover effect for the links in the content */
-.content-section a {
-    color: #004080;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.content-section a:hover {
-    text-decoration: underline;
-}
-
-/* Styling for lists to make them look clean */
-.content-section li {
-    margin-bottom: 10px;
-}
-
-/* Hero Section Adjustments */
-.hero-content h1 {
-    font-size: 3rem;
-    animation: fadeIn 2s ease;
-}
-
-/* Main Section Styling for Balance */
-main {
-    padding: 30px;
-}
-
-/* Smooth animation for the hero content */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* Responsiveness */
+/* Responsive Design Enhancements */
 @media (max-width: 768px) {
-    .section-title {
-        font-size: 1.5rem;
-    }
-    .content-section {
+    /* Navigation Bar */
+    nav {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align to the left */
+        gap: 1rem; /* Add spacing between items */
         padding: 1rem;
     }
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 0.5rem;
+    }
+    nav h1 {
+        font-size: 2rem; /* Adjust font size */
+        text-align: center; /* Center-align the title */
+    }
+    
+    /* Hero Section */
+    .hero {
+        flex-direction: column; /* Stack content vertically */
+        padding: 1rem;
+        height: auto; /* Allow height to adjust based on content */
+    }
+    .hero h1 {
+        font-size: 2rem; /* Adjust font size */
+    }
+    .hero p {
+        font-size: 1.2rem; /* Adjust paragraph font size */
+    }
+
+    
+    /* Q&A Section */
+    .qa-container {
+        gap: 0.5rem; /* Reduce gap between Q&A items */
+    }
+    .qa-item {
+        padding: 0.5rem; /* Adjust padding for better fit */
+    }
+
+    /* Footer */
+    footer {
+        padding: 1rem; /* Adjust padding */
+        font-size: 0.9rem; /* Adjust text size */
+    }
+
+    
 }
