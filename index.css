@@ -10,33 +10,41 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 1rem 2rem;
+    background-color: lightblue;
+    width: 100%;
+    position: static;
+    border-radius: 20px;
+}
+nav .logo {
+    height: 50px;
 }
 
-.logo-container {
+nav h1 {
+    font-family: Arial, sans-serif;
+    color: black;
+    font-size: 30px;
+    background-color: #004080;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+nav ul {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    gap: 1.5rem;
+    padding-right: 70px;
 }
-
-.logo {
-    width: 150px; /* Logo size */
-}
-
-.home-indicator {
-    margin-top: 10px; /* Space between logo and "Home" indicator */
-    font-size: 24px;
-    color: #333;
-}
-
-.nav-links {
-    display: flex;
-    gap: 15px;
-}
-
-.nav-links a {
+nav a {
+    color: #fff;
     text-decoration: none;
-    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+}
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
 }
 
 /* Hero Section */
@@ -230,31 +238,20 @@ footer a {
 
 /* Responsive Design Enhancements */
 @media (max-width: 768px) {
+    /* Navigation Bar */
     nav {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align to the left */
+        gap: 1rem; /* Add spacing between items */
+        padding: 1rem;
     }
-
-    .logo {
-        width: 120px; /* Adjust logo size for small screens */
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 0.5rem;
     }
-
-    .home-indicator {
-        font-size: 20px;
-    }
-
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        width: 100%; /* Ensure links occupy full width for easier interaction */
-    }
-
-    .nav-links a {
-        color: #000;
-        text-decoration: none;
-        margin-bottom: 10px; /* Space between links */
+    nav h1 {
+        font-size: 2rem; /* Adjust font size */
+        text-align: center; /* Center-align the title */
     }
     
     /* Hero Section */
