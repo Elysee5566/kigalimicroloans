@@ -238,42 +238,43 @@ footer a {
 
 /* Responsive Design Enhancements */
 @media (max-width: 768px) {
-    /* Navigation Bar */
-    nav {
-        position: relative; /* Positioning context for the absolute items */
-        padding: 1rem;
+    .header {
+        position: relative;
+        width: 100%;
+        padding: 20px;
+        background-color: #f8f8f8; /* Adjust background color */
     }
 
-    /* Logo */
-    nav .logo {
+    .logo {
         position: absolute;
-        left: 20px; /* Adjust to position logo from left */
-        top: 20px; /* Adjust to position logo from top */
-        height: 50px;
+        top: 0;
+        left: 0;
+        width: 120px; /* Adjust logo size for small screens */
     }
 
-    /* Navigation Links */
-    nav ul {
+    .home-indicator {
         position: absolute;
-        right: 20px; /* Position the links to the right */
-        top: 20px; /* Align links at the top */
+        top: 80px; /* Adjust spacing from logo */
+        left: 0;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 50%; /* Center vertically */
+        right: 20px;
         display: flex;
-        flex-direction: row; /* Keep links in a horizontal row */
-        gap: 1.5rem;
-        padding: 0;
+        flex-direction: column;
+        align-items: flex-end;
     }
 
-    nav ul li {
-        list-style: none;
-    }
-
-    nav a {
-        color: #fff;
+    .nav-links a {
+        color: #000;
         text-decoration: none;
-        font-weight: bold;
-        font-size: 20px;
+        margin-bottom: 10px; /* Space between links */
     }
-
+    
     nav ul li a:hover {
         color: #ffd700;
     }
