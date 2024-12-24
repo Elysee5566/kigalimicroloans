@@ -247,7 +247,6 @@ footer a {
     }
     nav ul {
         flex-direction: column; /* Stack menu items vertically */
-        align-items: right; /* Align to the right */
         gap: 0.5rem;
     }
     nav h1 {
