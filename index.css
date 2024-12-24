@@ -241,7 +241,7 @@ footer a {
     /* Navigation Bar */
     nav {
         flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align to the left */
+        align-items: right; /* Align to the right */
         gap: 1rem; /* Add spacing between items */
         padding: 1rem;
     }
