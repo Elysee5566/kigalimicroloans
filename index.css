@@ -240,18 +240,57 @@ footer a {
 @media (max-width: 768px) {
     /* Navigation Bar */
     nav {
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align to the left */
-        gap: 1rem; /* Add spacing between items */
+        position: relative; /* Positioning context for the absolute items */
         padding: 1rem;
     }
-    nav ul {
-        flex-direction: column; /* Stack menu items vertically */
-        gap: 0.5rem;
+
+    /* Logo */
+    nav .logo {
+        position: absolute;
+        left: 20px; /* Adjust to position logo from left */
+        top: 20px; /* Adjust to position logo from top */
+        height: 50px;
     }
-    nav h1 {
+
+    /* Navigation Links */
+    nav ul {
+        position: absolute;
+        right: 20px; /* Position the links to the right */
+        top: 20px; /* Align links at the top */
+        display: flex;
+        flex-direction: row; /* Keep links in a horizontal row */
+        gap: 1.5rem;
+        padding: 0;
+    }
+
+    nav ul li {
+        list-style: none;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    nav ul li a:hover {
+        color: #ffd700;
+    }
+
+    /* Hero Section */
+    .hero {
+        flex-direction: column; /* Stack content vertically */
+        padding: 1rem;
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .hero h1 {
         font-size: 2rem; /* Adjust font size */
-        text-align: center; /* Center-align the title */
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Adjust paragraph font size */
     }
     
     /* Hero Section */
