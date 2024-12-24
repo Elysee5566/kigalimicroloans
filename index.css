@@ -10,35 +10,38 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 1rem 2rem;
+    background-color: lightblue;
+    width: 100%;
+    position: static;
+    border-radius: 20px;
+}
+nav .logo {
+    height: 50px;
 }
 
-.logo-container {
+nav h1 {
+    font-family: Arial, sans-serif;
+    color: black;
+    font-size: 30px;
+    background-color: #004080;
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+nav ul {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    gap: 1.5rem;
+    padding-right: 70px;
 }
-
-.logo {
-    width: 150px; /* Logo size */
-}
-
-.home-indicator {
-    margin-top: 10px; /* Space between logo and "Home" indicator */
-    font-size: 24px;
-    color: #333;
-}
-
-.nav-links {
-    display: flex;
-    gap: 15px;
-}
-
-.nav-links a {
+nav a {
+    color: #fff;
     text-decoration: none;
-    color: #000;
+    font-weight: bold;
+    font-size: 20px;
 }
-
+nav ul li {
+    list-style: none;
+}
 
 nav ul li a:hover {
     color: #ffd700;
@@ -235,60 +238,20 @@ footer a {
 
 /* Responsive Design Enhancements */
 @media (max-width: 768px) {
-    .header {
-        position: relative;
-        width: 100%;
-        padding: 20px;
-        background-color: #f8f8f8; /* Adjust background color */
-    }
-
-    .logo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 120px; /* Adjust logo size for small screens */
-    }
-
-    .home-indicator {
-        position: absolute;
-        top: 80px; /* Adjust spacing from logo */
-        left: 0;
-        font-size: 18px;
-        color: #333;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 50%; /* Center vertically */
-        right: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-    .nav-links a {
-        color: #000;
-        text-decoration: none;
-        margin-bottom: 10px; /* Space between links */
-    }
-    
-    nav ul li a:hover {
-        color: #ffd700;
-    }
-
-    /* Hero Section */
-    .hero {
-        flex-direction: column; /* Stack content vertically */
+    /* Navigation Bar */
+    nav {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align to the left */
+        gap: 1rem; /* Add spacing between items */
         padding: 1rem;
-        height: auto; /* Allow height to adjust based on content */
     }
-
-    .hero h1 {
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 0.5rem;
+    }
+    nav h1 {
         font-size: 2rem; /* Adjust font size */
-    }
-
-    .hero p {
-        font-size: 1.2rem; /* Adjust paragraph font size */
+        text-align: center; /* Center-align the title */
     }
     
     /* Hero Section */
