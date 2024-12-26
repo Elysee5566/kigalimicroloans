@@ -157,12 +157,12 @@ main {
 }
 
 .social-icons a img {
-    width: 100px;
-    height: 100px;
+    width: 150px;    /* Enlarged icon size */
+    height: 150px;   /* Enlarged icon size */
 }
 
 .social-icons a:hover img {
-    transform: scale(1.1);
+    transform: scale(1.2);  /* Stronger zoom effect on hover */
     transition: 0.3s;
 }
 
