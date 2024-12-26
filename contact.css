@@ -157,8 +157,8 @@ main {
 }
 
 .social-icons a img {
-    width: 30%;
-    height: 30%;
+    width: 100px;
+    height: 100px;
 }
 
 .social-icons a:hover img {
