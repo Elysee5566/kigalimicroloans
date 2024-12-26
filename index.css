@@ -243,48 +243,20 @@ footer a {
 @media (max-width: 768px) {
     /* Navigation Bar */
 
-    nav ul {
-        display: none; /* Hide links by default */
-        flex-direction: column;
-        position: absolute;
-        top: 70px; /* Adjust based on nav height */
-        right: 10px;
-        background-color: #004080; /* Match the navbar color */
+ nav {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align to the left */
+        gap: 1rem; /* Add spacing between items */
         padding: 1rem;
-        border-radius: 10px;
-        gap: 1rem;
-        z-index: 1000;
     }
-
-    nav ul.active {
-        display: flex; /* Show when active */
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 0.5rem;
     }
-
-    .hamburger {
-        display: block; /* Show hamburger on small screens */
-    }
-
-    /* Align items horizontally */
-    nav {
-        justify-content: flex-start;
-    }
-
-    .logo {
-        margin-right: 10px;
-    }
-
-    h1 {
-        text-align: left;
-        font-size: 10px; /* Adjust for smaller screens */
-    }
-
     nav h1 {
-        font-size: 24px; /* Smaller font size for small screens */
-        text-align: left; /* Align to the left for better layout */
-        padding: 0.3rem; /* Reduce padding */
-        margin-left: 10px; /* Optional spacing adjustment */
-    }
-    
+        font-size: 2rem; /* Adjust font size */
+        text-align: center; /* Center-align the title */
+    }   
     /* Hero Section */
     .hero {
         flex-direction: column; /* Stack content vertically */
