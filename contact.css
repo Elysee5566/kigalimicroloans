@@ -162,6 +162,7 @@ main {
 }
 
 .social-icons a:hover img {
+    padding-top: 40px;
     transform: scale(1.1);  /* Slight zoom effect on hover */
     transition: 0.3s;
 }
