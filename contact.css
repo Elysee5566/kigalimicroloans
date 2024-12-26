@@ -157,8 +157,8 @@ main {
 }
 
 .social-icons a img {
-    width: 150px;    /* Enlarged icon size */
-    height: 150px;   /* Enlarged icon size */
+    width: 80px;    /* Enlarged icon size */
+    height: 80px;   /* Enlarged icon size */
 }
 
 .social-icons a:hover img {
