@@ -55,6 +55,7 @@ nav ul li a:hover {
     height: 80vh;
     background: url('background-animation.mp4') no-repeat center center;
     background-size: cover;
+    color: #fff;
     background-image: url(Media/Loan.webp);
     text-align: center;
     position: relative;
